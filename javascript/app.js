@@ -32,7 +32,7 @@ var apiKey = "ryz7dd7qeq6e";
 
 $("#start").on("click", function () {
 
-  var queryURL = "https://www.fantasyfootballnerd.com/service/weekly-rankings/json/" + apiKey + "/QB&RB";
+  var queryURL = "https://www.fantasyfootballnerd.com/service/weekly-rankings/json/" + apiKey + "/QB";
 
 $.ajax({
     url: queryURL,
@@ -90,21 +90,20 @@ $(".positionButtons").on("click", function () {
 // });
 
     // https://cors-anywhere.herokuapp.com/
-    $.ajax({
-        url: queryURL,
-        method: "GET"
-    }).then(function (response) {
-        // console.log(response);
-        // console.log("click");
-        var rank = response.Rankings 
-        // console.log(rank)
-        for (var i = 0; i < 5; i++){
-            console.log(rank[i])
-        }
+    // $.ajax({
+    //     url: queryURL,
+    //     method: "GET"
+    // }).then(function (response) {
+    //     // console.log(response);
+    //     // console.log("click");
+    //     var rank = response.Rankings 
+    //     // console.log(rank)
+    //     for (var i = 0; i < 5; i++){
+    //         console.log(rank[i])
+    //     }
 
-    });
+    // });
     
-})
 
 
 
