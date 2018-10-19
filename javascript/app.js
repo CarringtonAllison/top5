@@ -10,7 +10,7 @@ var config = {
 firebase.initializeApp(config);
 var database = firebase.database();
 
-
+//start button hiding everything 
 $(document).ready(function () {
     $(".main-screen").hide();
     $("#start").click(function () {
@@ -32,7 +32,6 @@ jQuery.ajaxPrefilter(function (options) {
 
 var queryURL = "https://www.fantasyfootballnerd.com/service/players/json/" + apiKey + "/QB";
 
-// https://cors-anywhere.herokuapp.com/
 $.ajax({
     url: queryURL,
     method: "GET"
@@ -47,7 +46,6 @@ $(".positionButtons").on("click", function () {
 
     var posistion = $(this).attr("id")
     console.log(posistion)
-
 
     //Fantasy Football Nerd API 
     var apiKey = "ryz7dd7qeq6e";
@@ -65,15 +63,16 @@ $(".positionButtons").on("click", function () {
         url: queryURL,
         method: "GET"
     }).then(function (response) {
-        console.log(response);
-        console.log("click");
+        // console.log(response);
+        // console.log("click");
+        var rank = response.Rankings 
+        // console.log(rank)
+        for (var i = 0; i < 5; i++){
+            console.log(rank[i])
+        }
+
     });
-
-
-
-
-
-
+    
 })
 
 

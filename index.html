@@ -23,12 +23,14 @@
                 Sleepers
             </div>
         </div>
-    </div>  
 
-    <div class="container start-screen">
-        <div class="col-2">
-            <a href="#" id="start" class="btn btn-danger btn-lg"> Let's Go!!</a>
+    <!--  start screen -->
+        <div class="row start-screen">
+            <div class="col  d-flex justify-content-center">
+                <a href="#" id="start" class="btn btn-danger btn-lg"> Let's Go!!</a>
+            </div>
         </div>
+        
     </div>
 
     <!-- 8 man / 10 man / 12 man league buttons  -->
@@ -62,12 +64,10 @@
                     <table class="table table-sm table-hover">
                         <thead>
                             <tr>
-                                <th scope="col">Player Name</th>
                                 <th scope="col">Position</th>
-                                <th scope="col">Stat1</th>
-                                <th scope="col">Stat2</th>
-                                <th scope="col">Stat3</th>
-                                <th scope="col">Stat4</th>
+                                <th scope="col">Player Name</th>
+                                <th scope="col">Team</th>
+                                <th scope="col">Points</th>
                             </tr>
                         </thead>
                         <tbody id="player">
@@ -78,60 +78,28 @@
         </div>
 
 
-        <!-- displaying all players  -->
         <div class="row">
-            <div class="col-12">
-                <div class="card-header">Sleepers
-                    <div class="btn-group" role="group" aria-label="Basic example">
-                        <button type="button" class="positionButtons btn btn-secondary" id="QB">QB</button>
-                        <button type="button" class="positionButtons btn btn-secondary" id="RB">RB</button>
-                        <button type="button" class="positionButtons btn btn-secondary" id="WR">WR</button>
-                        <button type="button" class="positionButtons btn btn-secondary" id="TE">TE</button>
-                        <button type="button" class="positionButtons btn btn-secondary" id="D">D/ST</button>
-                        <button type="button" class="positionButtons btn btn-secondary" id="K">K</button>
+            <div class="col-sm-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Sleeper Chat!</h5>
+                        <div id="msgList"></div>
+
+                        <form action="">
+                            <label for="">
+                                Name: <input type="text" id="nameIpt" placeholder="Name">
+                            </label>
+                            <label for="">
+                                Message: <input type="text" id="msgIpt" placeholder="Message" value="" autofocus>
+                                <br>
+                            </label>
+                            <input type="button" id="btnSubmit" value="Submit">
+                        </form>
                     </div>
                 </div>
-                <div class="card-body">
-                    <table class="table table-sm table-hover">
-                        <thead>
-                            <tr>
-                                <th scope="col">Player Name</th>
-                                <th scope="col">Position</th>
-                                <th scope="col">Stat1</th>
-                                <th scope="col">Stat2</th>
-                                <th scope="col">Stat3</th>
-                                <th scope="col">Stat4</th>
-                            </tr>
-                        </thead>
-                    </table>
-                </div>
             </div>
         </div>
     </div>
-
-
-    <div class="row">
-        <div class="col-sm-3">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Sleeper Chat!</h5>
-                    <div id="msgList"></div>
-
-                    <form action="">
-                        <label for="">
-                            Name: <input type="text" id="nameIpt" placeholder="Name">
-                        </label>
-                        <label for="">
-                            Message: <input type="text" id="msgIpt" placeholder="Message" value="" autofocus>
-                            <br>
-                        </label>
-                        <input type="button" id="btnSubmit" value="Submit">
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
 
 
 
