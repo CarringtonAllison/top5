@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./css/reset.css" type="text/css">
-    <link rel="shortcut icon" href="http://www.iconarchive.com/download/i6272/custom-icon-design/pretty-office-6/American-football.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="http://www.iconarchive.com/download/i6272/custom-icon-design/pretty-office-6/American-football.ico"
+        type="image/x-icon">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css" type="text/css">
@@ -15,24 +16,26 @@
 
 <body>
 
-    <div class="container">
+    <div class="fluid-container">
         <!-- Header -->
-        <div class="row">
-            <div class="col">
-                <h1 id="title">Sleepers</h1>
+        <div class="row ">
+            <div class="jumbotron">
+                Sleepers
             </div>
         </div>
+    </div>
 
-        <!-- 8 man / 10 man / 12 man league buttons  -->
+    <!-- 8 man / 10 man / 12 man league buttons  -->
+    <div class="container">
         <div class="row">
-            <div class="col">
-                <button id="8manButton">8 Man League</button>
+            <div class="col d-flex justify-content-center ">
+                <button class="leagueButtons btn btn-secondary" id="8manButton">8 Man League</button>
             </div>
-            <div class="col">
-                <button id="10manButton">10 Man League</button>
+            <div class="col d-flex justify-content-center ">
+                <button class="leagueButtons btn btn-secondary" id="10manButton">10 Man League</button>
             </div>
-            <div class="col">
-                <button id="12manLeague">12 Man League</button>
+            <div class="col d-flex justify-content-center ">
+                <button class="leagueButtons btn btn-secondary" id="12manLeague">12 Man League</button>
             </div>
         </div>
 
@@ -42,7 +45,16 @@
         <!-- table of the sleepers to be dislayed -->
         <div class="row">
             <div class="col-12">
-                <div class="card-header">All Players</div>
+                <div class="card-header">All Players
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="positionButtons btn btn-secondary" id="qbButton">QB</button>
+                        <button type="button" class="positionButtons btn btn-secondary" id="rbButton">RB</button>
+                        <button type="button" class="positionButtons btn btn-secondary" id="wrButton">WR</button>
+                        <button type="button" class="positionButtons btn btn-secondary" id="teButton">TE</button>
+                        <button type="button" class="positionButtons btn btn-secondary" id="dButton">D/ST</button>
+                        <button type="button" class="positionButtons btn btn-secondary" id="kButton">K</button>
+                    </div>
+                </div>
                 <div class="card-body">
                     <table class="table table-sm table-hover">
                         <thead>
@@ -59,12 +71,21 @@
                 </div>
             </div>
         </div>
-        
-        
+
+
         <!-- displaying all players  -->
         <div class="row">
             <div class="col-12">
-                <div class="card-header">Sleepers</div>
+                <div class="card-header">Sleepers
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="positionButtons btn btn-secondary" id="qbButton">QB</button>
+                        <button type="button" class="positionButtons btn btn-secondary" id="rbButton">RB</button>
+                        <button type="button" class="positionButtons btn btn-secondary" id="wrButton">WR</button>
+                        <button type="button" class="positionButtons btn btn-secondary" id="teButton">TE</button>
+                        <button type="button" class="positionButtons btn btn-secondary" id="dButton">D/ST</button>
+                        <button type="button" class="positionButtons btn btn-secondary" id="kButton">K</button>
+                    </div>
+                </div>
                 <div class="card-body">
                     <table class="table table-sm table-hover">
                         <thead>
@@ -113,10 +134,11 @@
 
 
 
-                <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-                    crossorigin="anonymous"></script>
-                    <script src="https://www.gstatic.com/firebasejs/5.5.4/firebase.js"></script>
-                    <script src="app.js"></script>
+              
+    <script src="https://www.gstatic.com/firebasejs/5.5.4/firebase.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="./javascript/app.js"></script>
 </body>
 
 </html>

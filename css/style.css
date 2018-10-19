@@ -1,4 +1,12 @@
-#title {
+.jumbotron {
+    width: 100%;
+    background-image: url("http://clickwallpapers.com/1080p/football-field-wallpapers-desktop-background-On-Wallpaper-1080p-HD.jpg");
+    background-position: center;
+    background-size: cover;
+    color: #86461e;
+    font-size: 55px;
+    -webkit-text-stroke: white;
+    font-family: 'Sleepers';
     text-align: center;
 }
 .body{
@@ -23,3 +31,22 @@
     margin: 0 auto 10px;
     text-align: left;
   }
+
+border-radius: 30px; 
+    padding: 15px;
+}
+
+.btn-group  {
+    float: right;
+}
+
+.leagueButtons {
+    border-radius: 30px;
+    padding: 10px;
+}
+
+@font-face {
+    font-family: 'Sleepers';
+    src: url(../images/KR\ Football\ Fun\ copy.ttf)
+}
+
