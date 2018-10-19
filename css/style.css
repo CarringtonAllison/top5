@@ -1,3 +1,25 @@
 #title {
     text-align: center;
 }
+.body{
+    text-align: center;
+    background-color: rgb(161, 148, 148);
+}
+.card-title>h5{
+    text-align: center;
+    height: 10px;
+    background-clip: border-box;
+}
+
+.card-title{
+    text-align: center;
+}
+
+  #msgList {
+    width: 200px;
+    height: 200px;
+    overflow-y: scroll;
+    border: 5px solid rgb(185, 17, 17);
+    margin: 0 auto 10px;
+    text-align: left;
+  }
