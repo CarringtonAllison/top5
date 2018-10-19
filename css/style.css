@@ -8,6 +8,8 @@
     -webkit-text-stroke: white;
     font-family: 'Sleepers';
     text-align: center;
+    border-radius : 30px; 
+    padding: 15px;
 }
 .body{
     text-align: center;
@@ -23,18 +25,15 @@
     text-align: center;
 }
 
-  #msgList {
+#msgList {
     width: 200px;
     height: 200px;
     overflow-y: scroll;
     border: 5px solid rgb(185, 17, 17);
     margin: 0 auto 10px;
     text-align: left;
-  }
-
-border-radius: 30px; 
-    padding: 15px;
 }
+
 
 .btn-group  {
     float: right;
