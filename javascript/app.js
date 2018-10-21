@@ -13,8 +13,7 @@ var fantasyApiKey = "ryz7dd7qeq6e";
 var yelpApiKey = "DEarLC7CAG_qsAEt1-nz8iyDsLL2tcDUn72S1wje4GmAksA05LKkj2MpqqyyNzFMdiysoE-Nv_wTUGQQn-rYM5scXqQpdFu-mObJuPPtwyiGXrqLWPGAYdrG-q7LW3Yx"
 
 
-//cors hack
-
+// cors hack
 jQuery.ajaxPrefilter(function (options) {
     if (options.crossDomain && jQuery.support.cors) {
         options.url = 'https://cors-anywhere.herokuapp.com/' + options.url;
@@ -27,6 +26,7 @@ $(document).ready(function () {
     $("#start").click(function () {
         $(".main-screen").fadeIn();
         $(".first-buttons").hide();
+        $("#zipCode").hide();
         $(this).hide();
     });
 });
@@ -131,7 +131,7 @@ $("#standard").on("click", function () {
 
 // this is the YELP api testing on a button
 $("#yelp").on("click", function () {
-    
+    console.log("working")
     //This url is set for 85233 zip right now but we can set a variable for that to change with input 
     var yelpUrl = "https://api.yelp.com/v3/businesses/search?location=85233&categories=sportsbars&limit=5"
     
@@ -143,7 +143,32 @@ $("#yelp").on("click", function () {
         method: 'GET',
         dataType: 'json',
         success: function (data) {
-            console.log(data);
+            // console.log(data);
+            sportsBar = data.businesses
+            console.log(sportsBar)
+
+            for (var i = 0; i < 5; i++) {
+                var $div = $("<div>");
+                $div.addClass("col d-flex justify-content-center layout");
+                var $2div = $("<div>");
+                $2div.addClass("card bars");
+                var $img = $("<img>");
+                $img.addClass("card-img-top img-size");
+                $img.attr("src", sportsBar[i].image_url);
+                $img.attr("alt", sportsBar[i].name);
+                var $3div = $("<div>");
+                $3div.addClass("card-body");
+                var $p = $("<p>");
+                $p.addClass("card-text");
+                $p.attr("id", "barInfo")
+                $p.append("<h4>" + sportsBar[i].name + "</h4>", "<p class='barText'>" + sportsBar[i].location.display_address + "</p>", "<p class='barText'>" + "Phone: " + sportsBar[i].phone + "</p>");
+                $div.append($2div);
+                $2div.append($img, $3div);
+                $3div.append($p);
+                $("#barListing").append($div);
+            }
+
+
         }
     });
     
