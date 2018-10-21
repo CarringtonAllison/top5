@@ -23,19 +23,47 @@
 
 .card-title{
     text-align: center;
+    margin-bottom: 3px;
+}
+
+.dropdown-menu {
+    overflow-y: scroll;
+    height: 250px;
+
+}
+
+.card-header {
+    font-size: 13px;
+    margin-bottom: -10px;
+    font-weight: bold;
+}
+
+.card {
+    border-radius: 30px;    
+    border-width: 10px;
+}
+
+label {
+    border-radius: 10px;
+    font-size: 13px;
+}
+
+input {
+    border-radius: 10px;
+    font-size: 13px;
+    margin-right: 30px;
+    margin-bottom: 10px;
 }
 
 #msgList {
-    width: 200px;
-    height: 200px;
+    height: 65px;
     overflow-y: scroll;
-    border: 5px solid rgb(185, 17, 17);
     margin: 0 auto 10px;
     text-align: left;
 }
 
 #start {
-    margin-top: 220px;
+    margin-top: 10px;
 }
 
 
@@ -53,3 +81,39 @@
     src: url(../images/KR\ Football\ Fun\ copy.ttf)
 }
 
+hr {
+    border-width: 5px;
+}
+
+#msgList {
+    width: 100%;
+}
+
+.positionButtons {
+    font-size: 10px;
+    margin-top: -4px;
+    margin-right: -2px;
+    margin-left: -2px;
+}
+
+th {
+    font-size: 13px;
+    background-color: beige;
+    font-weight: bold;
+}
+
+td {
+    font-size: 12px;
+}
+
+#firstScreen {
+    text-align: center;
+}
+
+#dropdownMenuLink {
+    margin-top: 300px;
+}
+
+#K {
+    margin-right: -12px;
+}
