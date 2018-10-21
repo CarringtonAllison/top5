@@ -13,8 +13,12 @@
 }
 .body{
     text-align: center;
-    background-color: rgb(161, 148, 148);
+    background-color: rgb(151,35,63);
 }
+
+/* body {
+    background-color: rgb(151,35,63);
+} */
 .card-title>h5{
     text-align: center;
     height: 10px;

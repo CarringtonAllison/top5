@@ -10,13 +10,15 @@
         type="image/x-icon">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" href="./css/style.css" type="text/css">
+
     <title>Sleepers</title>
 </head>
 
 <body>
     <!-- navbar -->
-    <nav class="main-screen navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="main-screen navbar navbar-expand-lg navbar-light bg-light nav-color">
         <a class="navbar-brand" href="#">Navbar</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
             aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,39 +37,39 @@
                         aria-haspopup="true" aria-expanded="false">
                         Favorite Team
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="#">Arizona Cardinals</a>
-                        <a class="dropdown-item" href="#">Atlanta Falcons</a>
-                        <a class="dropdown-item" href="#">Baltimore Ravens</a>
-                        <a class="dropdown-item" href="#">Buffalo Bills</a>
-                        <a class="dropdown-item" href="#">Carolina Panthers</a>
-                        <a class="dropdown-item" href="#">Chicago Bears</a>
-                        <a class="dropdown-item" href="#">Cincinnati Bengals</a>
-                        <a class="dropdown-item" href="#">Cleveland Browns</a>
-                        <a class="dropdown-item" href="#">Dallas Cowboys</a>
-                        <a class="dropdown-item" href="#">Denver Broncos</a>
-                        <a class="dropdown-item" href="#">Detroit Lions</a>
-                        <a class="dropdown-item" href="#">Green Bay Packers </a>
-                        <a class="dropdown-item" href="#">Houston Texans</a>
-                        <a class="dropdown-item" href="#">Indianapolis Colts</a>
-                        <a class="dropdown-item" href="#">Jacksonville Jaguars</a>
-                        <a class="dropdown-item" href="#">Kansas City Chiefs</a>
-                        <a class="dropdown-item" href="#">Los Angeles Chargers</a>
-                        <a class="dropdown-item" href="#">Los Angeles Rams</a>
-                        <a class="dropdown-item" href="#">Miami Dolphins</a>
-                        <a class="dropdown-item" href="#">Minnesota Vikings</a>
-                        <a class="dropdown-item" href="#">New England Patriots</a>
-                        <a class="dropdown-item" href="#">New Orleans Saints</a>
-                        <a class="dropdown-item" href="#">New York Giants</a>
-                        <a class="dropdown-item" href="#">New York Jets</a>
-                        <a class="dropdown-item" href="#">Oakland Raiders</a>
-                        <a class="dropdown-item" href="#">Philadelphia Eagles</a>
-                        <a class="dropdown-item" href="#">Pittsburgh Steelers</a>
-                        <a class="dropdown-item" href="#">San Francisco 49ers</a>
-                        <a class="dropdown-item" href="#">Seattle Seahawks</a>
-                        <a class="dropdown-item" href="#">Tampa Bay Buccaneers</a>
-                        <a class="dropdown-item" href="#">Tennessee Titans</a>
-                        <a class="dropdown-item" href="#">Washington Redskins</a>
+                    <div id="nav-bar-test" class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item team-list" href="#" value="Arizona Cardinals">Arizona Cardinals</a>
+                        <a class="dropdown-item" href="#" value="Atlanta Falcons">Atlanta Falcons</a>
+                        <a class="dropdown-item" href="#" value="Baltimore Ravens">Baltimore Ravens</a>
+                        <a class="dropdown-item" href="#" value="Buffalo Bills">Buffalo Bills</a>
+                        <a class="dropdown-item" href="#" value="Carolina Panthers">Carolina Panthers</a>
+                        <a class="dropdown-item" href="#" value="Chicago Bears">Chicago Bears</a>
+                        <a class="dropdown-item" href="#" value="Cincinnati Bengals">Cincinnati Bengals</a>
+                        <a class="dropdown-item" href="#" value="Cleveland Browns">Cleveland Browns</a>
+                        <a class="dropdown-item" href="#" value="Dallas Cowboys">Dallas Cowboys</a>
+                        <a class="dropdown-item" href="#" value="Denver Broncos">Denver Broncos</a>
+                        <a class="dropdown-item" href="#" value="Detroit Lions">Detroit Lions</a>
+                        <a class="dropdown-item" href="#" value="Green Bay Packers">Green Bay Packers</a>
+                        <a class="dropdown-item" href="#" value="Houston Texans">Houston Texans</a>
+                        <a class="dropdown-item" href="#" value="Indianapolis Colts">Indianapolis Colts</a>
+                        <a class="dropdown-item" href="#" value="Jacksonville Jaguars">Jacksonville Jaguars</a>
+                        <a class="dropdown-item" href="#" value="Kansas City Chiefs">Kansas City Chiefs</a>
+                        <a class="dropdown-item" href="#" value="Los Angeles Chargers">Los Angeles Chargers</a>
+                        <a class="dropdown-item" href="#" value="Los Angeles Rams">Los Angeles Rams</a>
+                        <a class="dropdown-item" href="#" value="Miami Dolphins">Miami Dolphins</a>
+                        <a class="dropdown-item" href="#" value="Minnesota Vikings">Minnesota Vikings</a>
+                        <a class="dropdown-item" href="#" value="New England Patriots">New England Patriots</a>
+                        <a class="dropdown-item" href="#" value="New Orleans Saints">New Orleans Saints</a>
+                        <a class="dropdown-item" href="#" value="New York Giants">New York Giants</a>
+                        <a class="dropdown-item" href="#" value="New York Jets">New York Jets</a>
+                        <a class="dropdown-item" href="#" value="Oakland Raiders">Oakland Raiders</a>
+                        <a class="dropdown-item" href="#" value="Philadelphia Eagles">Philadelphia Eagles</a>
+                        <a class="dropdown-item" href="#" value="Pittsburgh Steelers">Pittsburgh Steelers</a>
+                        <a class="dropdown-item" href="#" value="San Francisco 49ers">San Francisco 49ers</a>
+                        <a class="dropdown-item" href="#" value="Seattle Seahawks">Seattle Seahawks</a>
+                        <a class="dropdown-item" href="#" value="Tampa Bay Buccaneers">Tampa Bay Buccaneers</a>
+                        <a class="dropdown-item" href="#" value="Tennessee Titans">Tennessee Titans</a>
+                        <a class="dropdown-item" href="#" value="Washington Redskins">Washington Redskins</a>
                     </div>
                 </li>
             </ul>
@@ -93,38 +95,38 @@
                     <a class="first-buttons btn btn-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Favorite Team</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="#">Arizona Cardinals</a>
-                        <a class="dropdown-item" href="#">Atlanta Falcons</a>
-                        <a class="dropdown-item" href="#">Baltimore Ravens</a>
-                        <a class="dropdown-item" href="#">Buffalo Bills</a>
-                        <a class="dropdown-item" href="#">Carolina Panthers</a>
-                        <a class="dropdown-item" href="#">Chicago Bears</a>
-                        <a class="dropdown-item" href="#">Cincinnati Bengals</a>
-                        <a class="dropdown-item" href="#">Cleveland Browns</a>
-                        <a class="dropdown-item" href="#">Dallas Cowboys</a>
-                        <a class="dropdown-item" href="#">Denver Broncos</a>
-                        <a class="dropdown-item" href="#">Detroit Lions</a>
-                        <a class="dropdown-item" href="#">Green Bay Packers </a>
-                        <a class="dropdown-item" href="#">Houston Texans</a>
-                        <a class="dropdown-item" href="#">Indianapolis Colts</a>
-                        <a class="dropdown-item" href="#">Jacksonville Jaguars</a>
-                        <a class="dropdown-item" href="#">Kansas City Chiefs</a>
-                        <a class="dropdown-item" href="#">Los Angeles Chargers</a>
-                        <a class="dropdown-item" href="#">Los Angeles Rams</a>
-                        <a class="dropdown-item" href="#">Miami Dolphins</a>
-                        <a class="dropdown-item" href="#">Minnesota Vikings</a>
-                        <a class="dropdown-item" href="#">New England Patriots</a>
-                        <a class="dropdown-item" href="#">New Orleans Saints</a>
-                        <a class="dropdown-item" href="#">New York Giants</a>
-                        <a class="dropdown-item" href="#">New York Jets</a>
-                        <a class="dropdown-item" href="#">Oakland Raiders</a>
-                        <a class="dropdown-item" href="#">Philadelphia Eagles</a>
-                        <a class="dropdown-item" href="#">Pittsburgh Steelers</a>
-                        <a class="dropdown-item" href="#">San Francisco 49ers</a>
-                        <a class="dropdown-item" href="#">Seattle Seahawks</a>
-                        <a class="dropdown-item" href="#">Tampa Bay Buccaneers</a>
-                        <a class="dropdown-item" href="#">Tennessee Titans</a>
-                        <a class="dropdown-item" href="#">Washington Redskins</a>
+                        <a class="dropdown-item team-list" href="#" value="Arizona Cardinals">Arizona Cardinals</a>
+                        <a class="dropdown-item" href="#" value="Atlanta Falcons">Atlanta Falcons</a>
+                        <a class="dropdown-item" href="#" value="Baltimore Ravens">Baltimore Ravens</a>
+                        <a class="dropdown-item" href="#" value="Buffalo Bills">Buffalo Bills</a>
+                        <a class="dropdown-item" href="#" value="Carolina Panthers">Carolina Panthers</a>
+                        <a class="dropdown-item" href="#" value="Chicago Bears">Chicago Bears</a>
+                        <a class="dropdown-item" href="#" value="Cincinnati Bengals">Cincinnati Bengals</a>
+                        <a class="dropdown-item" href="#" value="Cleveland Browns">Cleveland Browns</a>
+                        <a class="dropdown-item" href="#" value="Dallas Cowboys">Dallas Cowboys</a>
+                        <a class="dropdown-item" href="#" value="Denver Broncos">Denver Broncos</a>
+                        <a class="dropdown-item" href="#" value="Detroit Lions">Detroit Lions</a>
+                        <a class="dropdown-item" href="#" value="Green Bay Packers">Green Bay Packers</a>
+                        <a class="dropdown-item" href="#" value="Houston Texans">Houston Texans</a>
+                        <a class="dropdown-item" href="#" value="Indianapolis Colts">Indianapolis Colts</a>
+                        <a class="dropdown-item" href="#" value="Jacksonville Jaguars">Jacksonville Jaguars</a>
+                        <a class="dropdown-item" href="#" value="Kansas City Chiefs">Kansas City Chiefs</a>
+                        <a class="dropdown-item" href="#" value="Los Angeles Chargers">Los Angeles Chargers</a>
+                        <a class="dropdown-item" href="#" value="Los Angeles Rams">Los Angeles Rams</a>
+                        <a class="dropdown-item" href="#" value="Miami Dolphins">Miami Dolphins</a>
+                        <a class="dropdown-item" href="#" value="Minnesota Vikings">Minnesota Vikings</a>
+                        <a class="dropdown-item" href="#" value="New England Patriots">New England Patriots</a>
+                        <a class="dropdown-item" href="#" value="New Orleans Saints">New Orleans Saints</a>
+                        <a class="dropdown-item" href="#" value="New York Giants">New York Giants</a>
+                        <a class="dropdown-item" href="#" value="New York Jets">New York Jets</a>
+                        <a class="dropdown-item" href="#" value="Oakland Raiders">Oakland Raiders</a>
+                        <a class="dropdown-item" href="#" value="Philadelphia Eagles">Philadelphia Eagles</a>
+                        <a class="dropdown-item" href="#" value="Pittsburgh Steelers">Pittsburgh Steelers</a>
+                        <a class="dropdown-item" href="#" value="San Francisco 49ers">San Francisco 49ers</a>
+                        <a class="dropdown-item" href="#" value="Seattle Seahawks">Seattle Seahawks</a>
+                        <a class="dropdown-item" href="#" value="Tampa Bay Buccaneers">Tampa Bay Buccaneers</a>
+                        <a class="dropdown-item" href="#" value="Tennessee Titans">Tennessee Titans</a>
+                        <a class="dropdown-item" href="#" value="Washington Redskins">Washington Redskins</a>
                     </div>
                 </div>
                 <a href="#" id="start" class="btn btn-danger btn-lg"> Let's Go!!</a>
@@ -208,9 +210,14 @@
 
 
 
+    <!-- <script type="text/javascript">
+        google.load("jqueryui", "1.5.2");
+    </script> -->
+
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
