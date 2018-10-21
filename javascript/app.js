@@ -26,6 +26,7 @@ $(document).ready(function () {
     $(".main-screen").hide();
     $("#start").click(function () {
         $(".main-screen").fadeIn();
+        $(".first-buttons").hide();
         $(this).hide();
     });
 });
@@ -82,7 +83,7 @@ $(".positionButtons").on("click", function () {
             playersScore.attr("data-ppr", rank[i].ppr);
             playersScore.attr("data-standard", rank[i].standard);
             tRow.append(playerPosition, playerName, playerTeam, playersScore);
-            $("tbody").append(tRow).fadeIn();
+            $("tbody").append(tRow);
         }
     });
 });

@@ -15,10 +15,70 @@
 </head>
 
 <body>
+    <!-- navbar -->
+    <nav class="main-screen navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Standard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">PPR</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Favorite Team
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">Arizona Cardinals</a>
+                        <a class="dropdown-item" href="#">Atlanta Falcons</a>
+                        <a class="dropdown-item" href="#">Baltimore Ravens</a>
+                        <a class="dropdown-item" href="#">Buffalo Bills</a>
+                        <a class="dropdown-item" href="#">Carolina Panthers</a>
+                        <a class="dropdown-item" href="#">Chicago Bears</a>
+                        <a class="dropdown-item" href="#">Cincinnati Bengals</a>
+                        <a class="dropdown-item" href="#">Cleveland Browns</a>
+                        <a class="dropdown-item" href="#">Dallas Cowboys</a>
+                        <a class="dropdown-item" href="#">Denver Broncos</a>
+                        <a class="dropdown-item" href="#">Detroit Lions</a>
+                        <a class="dropdown-item" href="#">Green Bay Packers </a>
+                        <a class="dropdown-item" href="#">Houston Texans</a>
+                        <a class="dropdown-item" href="#">Indianapolis Colts</a>
+                        <a class="dropdown-item" href="#">Jacksonville Jaguars</a>
+                        <a class="dropdown-item" href="#">Kansas City Chiefs</a>
+                        <a class="dropdown-item" href="#">Los Angeles Chargers</a>
+                        <a class="dropdown-item" href="#">Los Angeles Rams</a>
+                        <a class="dropdown-item" href="#">Miami Dolphins</a>
+                        <a class="dropdown-item" href="#">Minnesota Vikings</a>
+                        <a class="dropdown-item" href="#">New England Patriots</a>
+                        <a class="dropdown-item" href="#">New Orleans Saints</a>
+                        <a class="dropdown-item" href="#">New York Giants</a>
+                        <a class="dropdown-item" href="#">New York Jets</a>
+                        <a class="dropdown-item" href="#">Oakland Raiders</a>
+                        <a class="dropdown-item" href="#">Philadelphia Eagles</a>
+                        <a class="dropdown-item" href="#">Pittsburgh Steelers</a>
+                        <a class="dropdown-item" href="#">San Francisco 49ers</a>
+                        <a class="dropdown-item" href="#">Seattle Seahawks</a>
+                        <a class="dropdown-item" href="#">Tampa Bay Buccaneers</a>
+                        <a class="dropdown-item" href="#">Tennessee Titans</a>
+                        <a class="dropdown-item" href="#">Washington Redskins</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
+
+    <!-- this is the jumbotron -->
     <div class="fluid-container">
         <!-- Header -->
-        <div class="row ">
+        <div class="row main-screen">
             <div class="jumbotron">
                 Sleepers
             </div>
@@ -26,16 +86,53 @@
 
         <div class="test"></div>
 
-    <!--  start screen -->
-        <div class="row start-screen">
-            <div class="col  d-flex justify-content-center">
+        <!--  start screen -->
+        <div class="row justify-content-center align-items-center start-screen">
+            <div id="firstScreen" class="col-4">
+                <div class="dropdown">
+                    <a class="first-buttons btn btn-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Favorite Team</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">Arizona Cardinals</a>
+                        <a class="dropdown-item" href="#">Atlanta Falcons</a>
+                        <a class="dropdown-item" href="#">Baltimore Ravens</a>
+                        <a class="dropdown-item" href="#">Buffalo Bills</a>
+                        <a class="dropdown-item" href="#">Carolina Panthers</a>
+                        <a class="dropdown-item" href="#">Chicago Bears</a>
+                        <a class="dropdown-item" href="#">Cincinnati Bengals</a>
+                        <a class="dropdown-item" href="#">Cleveland Browns</a>
+                        <a class="dropdown-item" href="#">Dallas Cowboys</a>
+                        <a class="dropdown-item" href="#">Denver Broncos</a>
+                        <a class="dropdown-item" href="#">Detroit Lions</a>
+                        <a class="dropdown-item" href="#">Green Bay Packers </a>
+                        <a class="dropdown-item" href="#">Houston Texans</a>
+                        <a class="dropdown-item" href="#">Indianapolis Colts</a>
+                        <a class="dropdown-item" href="#">Jacksonville Jaguars</a>
+                        <a class="dropdown-item" href="#">Kansas City Chiefs</a>
+                        <a class="dropdown-item" href="#">Los Angeles Chargers</a>
+                        <a class="dropdown-item" href="#">Los Angeles Rams</a>
+                        <a class="dropdown-item" href="#">Miami Dolphins</a>
+                        <a class="dropdown-item" href="#">Minnesota Vikings</a>
+                        <a class="dropdown-item" href="#">New England Patriots</a>
+                        <a class="dropdown-item" href="#">New Orleans Saints</a>
+                        <a class="dropdown-item" href="#">New York Giants</a>
+                        <a class="dropdown-item" href="#">New York Jets</a>
+                        <a class="dropdown-item" href="#">Oakland Raiders</a>
+                        <a class="dropdown-item" href="#">Philadelphia Eagles</a>
+                        <a class="dropdown-item" href="#">Pittsburgh Steelers</a>
+                        <a class="dropdown-item" href="#">San Francisco 49ers</a>
+                        <a class="dropdown-item" href="#">Seattle Seahawks</a>
+                        <a class="dropdown-item" href="#">Tampa Bay Buccaneers</a>
+                        <a class="dropdown-item" href="#">Tennessee Titans</a>
+                        <a class="dropdown-item" href="#">Washington Redskins</a>
+                    </div>
+                </div>
                 <a href="#" id="start" class="btn btn-danger btn-lg"> Let's Go!!</a>
             </div>
         </div>
-        
     </div>
 
-    <!-- 8 man / 10 man / 12 man league buttons  -->
+    <!--Standard and the PPR buttons  -->
     <div class="container main-screen">
         <div class="row">
             <div class="col d-flex justify-content-center ">
@@ -55,7 +152,7 @@
         <!-- table of the sleepers to be dislayed -->
         <div class="row">
             <div class="col-12">
-                <div class="card-header">All Players
+                <div class="card-header">Top 5 Players
                     <div class="btn-group" role="group" aria-label="Basic example">
                         <button type="button" class="positionButtons btn btn-secondary" id="QB">QB</button>
                         <button type="button" class="positionButtons btn btn-secondary" id="RB">RB</button>
@@ -82,23 +179,25 @@
             </div>
         </div>
 
+        <hr>
+        <hr>
 
-        <div class="row">
-            <div class="col-sm-3">
+        <!-- the chat box -->
+        <div class="row justify-content-center">
+            <div class="col-sm-12 col-md-8 col-lg-6">
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Sleeper Chat!</h5>
                         <div id="msgList"></div>
-
                         <form action="">
-                            <label for="">
-                                Name: <input type="text" id="nameIpt" placeholder="Name">
-                            </label>
-                            <label for="">
-                                Message: <input type="text" id="msgIpt" placeholder="Message" value="" autofocus>
+                            <div class="row justify-content-center">
+                                <input type="text" id="nameIpt" placeholder="Name">
+                                <input type="text" id="msgIpt" placeholder="Message" value="" autofocus>
                                 <br>
-                            </label>
-                            <input type="button" id="btnSubmit" value="Submit">
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <input type="button" id="btnSubmit" value="Submit">
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -110,13 +209,13 @@
 
 
 
-
-
-
-
-    <script src="https://www.gstatic.com/firebasejs/5.5.4/firebase.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.4/firebase.js"></script>
     <script src="./javascript/app.js"></script>
 </body>
 
