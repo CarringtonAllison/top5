@@ -15,9 +15,63 @@
 </head>
 
 <body>
+
+    <!-- first start screen that will hide after user presses start -->
+    <div class="container">
+        <div class="row justify-content-center start-screen">
+            <div id="firstScreen" class="col-4">
+                <div class="dropdown">
+                    <a class="first-buttons btn btn-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Favorite Team</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">Arizona Cardinals</a>
+                        <a class="dropdown-item" href="#">Atlanta Falcons</a>
+                        <a class="dropdown-item" href="#">Baltimore Ravens</a>
+                        <a class="dropdown-item" href="#">Buffalo Bills</a>
+                        <a class="dropdown-item" href="#">Carolina Panthers</a>
+                        <a class="dropdown-item" href="#">Chicago Bears</a>
+                        <a class="dropdown-item" href="#">Cincinnati Bengals</a>
+                        <a class="dropdown-item" href="#">Cleveland Browns</a>
+                        <a class="dropdown-item" href="#">Dallas Cowboys</a>
+                        <a class="dropdown-item" href="#">Denver Broncos</a>
+                        <a class="dropdown-item" href="#">Detroit Lions</a>
+                        <a class="dropdown-item" href="#">Green Bay Packers </a>
+                        <a class="dropdown-item" href="#">Houston Texans</a>
+                        <a class="dropdown-item" href="#">Indianapolis Colts</a>
+                        <a class="dropdown-item" href="#">Jacksonville Jaguars</a>
+                        <a class="dropdown-item" href="#">Kansas City Chiefs</a>
+                        <a class="dropdown-item" href="#">Los Angeles Chargers</a>
+                        <a class="dropdown-item" href="#">Los Angeles Rams</a>
+                        <a class="dropdown-item" href="#">Miami Dolphins</a>
+                        <a class="dropdown-item" href="#">Minnesota Vikings</a>
+                        <a class="dropdown-item" href="#">New England Patriots</a>
+                        <a class="dropdown-item" href="#">New Orleans Saints</a>
+                        <a class="dropdown-item" href="#">New York Giants</a>
+                        <a class="dropdown-item" href="#">New York Jets</a>
+                        <a class="dropdown-item" href="#">Oakland Raiders</a>
+                        <a class="dropdown-item" href="#">Philadelphia Eagles</a>
+                        <a class="dropdown-item" href="#">Pittsburgh Steelers</a>
+                        <a class="dropdown-item" href="#">San Francisco 49ers</a>
+                        <a class="dropdown-item" href="#">Seattle Seahawks</a>
+                        <a class="dropdown-item" href="#">Tampa Bay Buccaneers</a>
+                        <a class="dropdown-item" href="#">Tennessee Titans</a>
+                        <a class="dropdown-item" href="#">Washington Redskins</a>
+                    </div>
+                </div>
+                <div>
+                    <input class="justify-content-center" type="text" id="zipCode" placeholder="Zip Code">
+                </div>
+                <div>
+                    <a href="#" id="start" class="btn btn-danger btn-lg"> Let's Go!!</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <!-- navbar -->
     <nav class="main-screen navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a class="navbar-brand" href="#">Sleepers</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
             aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -25,10 +79,13 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Standard</a>
+                    <a id="standard" class="nav-link" href="#">Standard</a>
                 </li>
-                <li class="nav-item">
+                <li id="ppr" class="nav-item">
                     <a class="nav-link" href="#">PPR</a>
+                </li>
+                <li id="yelp" class="nav-item">
+                    <a class="nav-link" href="#">Yelp</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
@@ -75,111 +132,53 @@
     </nav>
 
 
+
     <!-- this is the jumbotron -->
-    <div class="fluid-container">
-        <!-- Header -->
+
+
+
+    <!-- table of the sleepers to be dislayed -->
+    <div class="fluid-container main-screen">
         <div class="row main-screen">
             <div class="jumbotron">
-                Sleepers
-            </div>
-        </div>
-
-        <div class="test"></div>
-
-        <!--  start screen -->
-        <div class="row justify-content-center align-items-center start-screen">
-            <div id="firstScreen" class="col-4">
-                <div class="dropdown">
-                    <a class="first-buttons btn btn-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Favorite Team</a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="#">Arizona Cardinals</a>
-                        <a class="dropdown-item" href="#">Atlanta Falcons</a>
-                        <a class="dropdown-item" href="#">Baltimore Ravens</a>
-                        <a class="dropdown-item" href="#">Buffalo Bills</a>
-                        <a class="dropdown-item" href="#">Carolina Panthers</a>
-                        <a class="dropdown-item" href="#">Chicago Bears</a>
-                        <a class="dropdown-item" href="#">Cincinnati Bengals</a>
-                        <a class="dropdown-item" href="#">Cleveland Browns</a>
-                        <a class="dropdown-item" href="#">Dallas Cowboys</a>
-                        <a class="dropdown-item" href="#">Denver Broncos</a>
-                        <a class="dropdown-item" href="#">Detroit Lions</a>
-                        <a class="dropdown-item" href="#">Green Bay Packers </a>
-                        <a class="dropdown-item" href="#">Houston Texans</a>
-                        <a class="dropdown-item" href="#">Indianapolis Colts</a>
-                        <a class="dropdown-item" href="#">Jacksonville Jaguars</a>
-                        <a class="dropdown-item" href="#">Kansas City Chiefs</a>
-                        <a class="dropdown-item" href="#">Los Angeles Chargers</a>
-                        <a class="dropdown-item" href="#">Los Angeles Rams</a>
-                        <a class="dropdown-item" href="#">Miami Dolphins</a>
-                        <a class="dropdown-item" href="#">Minnesota Vikings</a>
-                        <a class="dropdown-item" href="#">New England Patriots</a>
-                        <a class="dropdown-item" href="#">New Orleans Saints</a>
-                        <a class="dropdown-item" href="#">New York Giants</a>
-                        <a class="dropdown-item" href="#">New York Jets</a>
-                        <a class="dropdown-item" href="#">Oakland Raiders</a>
-                        <a class="dropdown-item" href="#">Philadelphia Eagles</a>
-                        <a class="dropdown-item" href="#">Pittsburgh Steelers</a>
-                        <a class="dropdown-item" href="#">San Francisco 49ers</a>
-                        <a class="dropdown-item" href="#">Seattle Seahawks</a>
-                        <a class="dropdown-item" href="#">Tampa Bay Buccaneers</a>
-                        <a class="dropdown-item" href="#">Tennessee Titans</a>
-                        <a class="dropdown-item" href="#">Washington Redskins</a>
+                <div class="container">
+                    <div id="tableBackground" class="col-12">
+                        <div class="card-header">Top 5 Players
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <button type="button" class="positionButtons btn btn-secondary" id="QB">QB</button>
+                                <button type="button" class="positionButtons btn btn-secondary" id="RB">RB</button>
+                                <button type="button" class="positionButtons btn btn-secondary" id="WR">WR</button>
+                                <button type="button" class="positionButtons btn btn-secondary" id="TE">TE</button>
+                                <button type="button" class="positionButtons btn btn-secondary" id="DEF">D/ST</button>
+                                <button type="button" class="positionButtons btn btn-secondary" id="K">K</button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <table class="table table-sm table-hover">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Position</th>
+                                        <th scope="col">Player Name</th>
+                                        <th scope="col">Team</th>
+                                        <th scope="col">Points</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="player">
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
-                <a href="#" id="start" class="btn btn-danger btn-lg"> Let's Go!!</a>
             </div>
         </div>
     </div>
 
-    <!--Standard and the PPR buttons  -->
     <div class="container main-screen">
-        <div class="row">
-            <div class="col d-flex justify-content-center ">
-                <button class="btn btn-secondary" id="standard">Standard</button>
-            </div>
-            <div class="col d-flex justify-content-center ">
-                <button class="btn btn-secondary" id="ppr">PPR</button>
-            </div>
-            <div class="col d-flex justify-content-center ">
-                <button class="btn btn-secondary" id="yelp">YELP</button>
-            </div>
-        </div>
 
-        <hr>
-        <hr>
+        <hr id="topHR">
 
-        <!-- table of the sleepers to be dislayed -->
-        <div class="row">
-            <div class="col-12">
-                <div class="card-header">Top 5 Players
-                    <div class="btn-group" role="group" aria-label="Basic example">
-                        <button type="button" class="positionButtons btn btn-secondary" id="QB">QB</button>
-                        <button type="button" class="positionButtons btn btn-secondary" id="RB">RB</button>
-                        <button type="button" class="positionButtons btn btn-secondary" id="WR">WR</button>
-                        <button type="button" class="positionButtons btn btn-secondary" id="TE">TE</button>
-                        <button type="button" class="positionButtons btn btn-secondary" id="DEF">D/ST</button>
-                        <button type="button" class="positionButtons btn btn-secondary" id="K">K</button>
-                    </div>
-                </div>
-                <div class="card-body">
-                    <table class="table table-sm table-hover">
-                        <thead>
-                            <tr>
-                                <th scope="col">Position</th>
-                                <th scope="col">Player Name</th>
-                                <th scope="col">Team</th>
-                                <th scope="col">Points</th>
-                            </tr>
-                        </thead>
-                        <tbody id="player">
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-
-        <hr>
+        <!-- where the Yelp bars load -->
+        <div id="barListing" class="row"></div>
         <hr>
 
         <!-- the chat box -->
@@ -204,7 +203,6 @@
             </div>
         </div>
     </div>
-
 
 
 
