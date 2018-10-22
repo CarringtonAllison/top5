@@ -34,9 +34,11 @@
     border-radius: 30px;    
     border-width: 10px;
 }
+
 .card-body {
     padding: 0.25rem;
 }
+
 label {
     border-radius: 10px;
     font-size: 13px;
@@ -130,7 +132,3 @@ td {
     background: rgba(0, 0, 0, .6)
 }
 
-/* .logos {
-    height: 200px;
-    width: 200px;
-} */

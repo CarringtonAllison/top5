@@ -167,8 +167,8 @@ $("#standard").on("click", function () {
 })
 
 // if the yelp results are clicked then they will open another page with the yelp website 
-$(document).on("click", ".bars", function () {
-    var barUrl = $(this).attr("data-url");
+$(document).on("click",".bars",function(){
+    var barUrl =$(this).attr("data-url");
     console.log(barUrl);
     window.open(barUrl)
 
