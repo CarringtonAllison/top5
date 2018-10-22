@@ -11,6 +11,8 @@ firebase.initializeApp(config);
 var database = firebase.database();
 var fantasyApiKey = "ryz7dd7qeq6e";
 var yelpApiKey = "DEarLC7CAG_qsAEt1-nz8iyDsLL2tcDUn72S1wje4GmAksA05LKkj2MpqqyyNzFMdiysoE-Nv_wTUGQQn-rYM5scXqQpdFu-mObJuPPtwyiGXrqLWPGAYdrG-q7LW3Yx"
+var cardColor;
+
 
 
 // cors hack
@@ -20,7 +22,7 @@ jQuery.ajaxPrefilter(function (options) {
     }
 });
 
-var cardColor;
+
 
 
 //start button hiding everything 
@@ -34,9 +36,11 @@ $(document).ready(function () {
     });
 });
 
+var audio = new Audio ("javascript/top5audio.mp3");
 
 //when the start button is clicked
 $("#start").on("click", function () {
+    audio.play();
    
 
     //Fantasy Football Nerd API
@@ -164,13 +168,17 @@ function displayMsg(name, text) {
 $("#ppr").on("click", function () {
     console.log("working");
     $(".scores").empty();
-    $(".scores").text($(".scores").attr("data-ppr"))
+    $(".scores").each(function(i, elem){
+        $(this).text($(this).attr("data-ppr"))
+    })
 })
 
 $("#standard").on("click", function () {
     console.log("working");
     $(".scores").empty();
-    $(".scores").text($(".scores").attr("data-standard"))
+    $(".scores").each(function(i, elem){
+        $(this).text($(this).attr("data-standard"))
+    })
 })
 
 // if the yelp results are clicked then they will open another page with the yelp website 
