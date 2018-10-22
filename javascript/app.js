@@ -254,11 +254,11 @@ favTeamColor()
 function favTeamColor() {
     console.log("click");
     // console.log(this);
-    // var logos = $("<image>").attr("class", "logos");
-    // $(".logos").attr("src", teamLogos.cardinals)
-    // $(".main-screen").append(logos);
-
+    
     $(".dropdown-item").on("click", function () {
+        var logos = $("<image>").attr("class", "logos");
+        $(".logos").attr("src", teamLogos.cardinals)
+        $(".main-screen").append(logos);
         var teamSelected = $(this).attr("value");
         console.log(teamSelected);
         if (teamSelected === "Arizona Cardinals") {
