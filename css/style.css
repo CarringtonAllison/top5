@@ -32,6 +32,10 @@
     font-size: 13px;
     margin-bottom: -10px;
     font-weight: bold;
+    padding: 0;
+    padding-top: 15px;
+    padding-bottom: 21px;
+    padding-right: 10px;
 }
 
 .card {
@@ -70,7 +74,7 @@ input {
 }
 
 .btn-group  {
-    float: right;
+    float: right; 
 }
 
 .leagueButtons {
@@ -118,7 +122,7 @@ td {
 }
 
 .layout {
-    margin: 5px -5px 5px -5px;
+    margin: 10px -5px 5px -5px;
 }
 
 .bars {
@@ -158,17 +162,28 @@ td {
 }
 
 .logos {
-    margin: 0 auto;
+    margin: 10px auto;
 }
 
 .logoDiv {
     display: flex;
 }
 
-a {
-    color: white; 
+@font-face {
+    font-family: 'regalia';
+    src: url("../images/regalia_free.otf")
 }
 
-a:hover {
-    color: black; 
+.navbar-brand {
+    font-family: 'regalia';
+    font-size: 30px; 
+}
+
+#nflLogo {
+    height: 57px;
+    margin-right: 20px; 
+}
+
+#navLogo {
+    float: right; 
 }

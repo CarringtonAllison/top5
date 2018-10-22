@@ -293,9 +293,9 @@ var teamLogos = {
 
     
     $(document).on("click", ".dropdown-item", function () {
-        var logos = $("<image>").attr("class", "logos");
-        $(".logos").attr("src", teamLogos.cardinals)
-        $(".main-screen").append(logos);
+        // var logos = $("<image>").attr("class", "logos");
+        // $(".logos").attr("src", teamLogos.cardinals)
+        // $(".main-screen").append(logos);
         var teamSelected = $(this).attr("value");
         console.log(teamSelected);
         if (teamSelected === "Arizona Cardinals") {
