@@ -4,6 +4,7 @@
     background-position: center;
     background-size: cover;
     color: white;
+    background-attachment: fixed;
 }
 .body{
     text-align: center;
@@ -37,6 +38,10 @@
     border-width: 10px;
 }
 
+.card-body {
+    padding: 0.25rem;
+}
+
 label {
     border-radius: 10px;
     font-size: 13px;
@@ -59,6 +64,8 @@ input {
 #start {
     margin: auto;
     margin-top: 10px;
+    background-color: green;
+    color: white;
 }
 
 
@@ -69,11 +76,6 @@ input {
 .leagueButtons {
     border-radius: 30px;
     padding: 10px;
-}
-
-@font-face {
-    font-family: 'Sleepers';
-    src: url(../images/KR\ Football\ Fun\ copy.ttf)
 }
 
 hr {
@@ -123,14 +125,16 @@ td {
     border-radius: 10px;
     border-width: 1px;
     width: 13rem;
-    height: 360px;
+    height: 330px;
 }
 
 .img-size {
+    margin: 20px auto;
     height: 150px;
     width: 150px;
-    margin: 20px auto;
     border-radius: 20px;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, .3);
+
 }
 
 #zipCode {
@@ -154,3 +158,4 @@ td {
 #tableBackground {
     background: rgba(0, 0, 0, .6)
 }
+
