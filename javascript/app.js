@@ -48,6 +48,7 @@ $("#start").on("click", function () {
     }).then(function (response) {
         console.log(response)
         rank = response.Rankings;
+        // console.log(response);
 
         for (var i = 0; i < 5; i++) {
             var tRow = $("<tr>");
@@ -61,6 +62,31 @@ $("#start").on("click", function () {
             tRow.append(playerPosition, playerName, playerTeam, playersScore);
             $("tbody").append(tRow);
         }
+    });
+
+
+    var queryURL = "https://www.fantasyfootballnerd.com/service/byes/json/ryz7dd7qeq6e/ppr/";
+
+    $.ajax({
+        url: queryURL,
+        method: "GET"
+    }).then(function (response) {
+
+
+        console.log(response);
+
+        // for (var i = 0; i < 5; i++) {
+        //     var tRow = $("<tr>");
+        //     var playerPosition = $("<td>").text(rank[i].position);
+        //     var playerName = $("<td>").text(rank[i].name);
+        //     var playerTeam = $("<td>").text(rank[i].team);
+        //     var playersScore = $("<td>").text(rank[i].standard);
+        //     playersScore.addClass("scores")
+        //     playersScore.attr("data-ppr", rank[i].ppr);
+        //     playersScore.attr("data-standard", rank[i].standard);
+        //     tRow.append(playerPosition, playerName, playerTeam, playersScore);
+        //     $("tbody").append(tRow);
+        // }
     });
 
     var zip = $("#zipCode").val();
@@ -174,8 +200,8 @@ $("#standard").on("click", function () {
 })
 
 // if the yelp results are clicked then they will open another page with the yelp website 
-$(document).on("click",".bars",function(){
-    var barUrl =$(this).attr("data-url");
+$(document).on("click", ".bars", function () {
+    var barUrl = $(this).attr("data-url");
     console.log(barUrl);
     window.open(barUrl)
 
@@ -188,71 +214,69 @@ $(document).on("click",".bars",function(){
 
 var teamLogos = {
 
-    cardinals: "https://mk0teamcolorcodtgc6i.kinstacdn.com/wp-content/uploads/2017/05/Arizona_Cardinals_logo.jpg",
+    cardinals: "https://s3.amazonaws.com/freebiesupply/large/2x/arizona-cardinals-logo-transparent.png",
 
-    falcons: "https://mk0teamcolorcodtgc6i.kinstacdn.com/wp-content/uploads/2017/05/Atlanta_Falcons_logo.jpg",
+    falcons: "https://www.printyourbrackets.com/nfl-logos/atlanta-falcons-logo.png",
 
-    ravens: "https://mk0teamcolorcodtgc6i.kinstacdn.com/wp-content/uploads/2017/05/Baltimore_Ravens_logo.jpg",
+    ravens: "https://www.printyourbrackets.com/nfl-logos/baltimore-ravens-logo.png",
 
-    bills: "https://mk0teamcolorcodtgc6i.kinstacdn.com/wp-content/uploads/2017/05/Buffalo_Bills_logo.jpg",
+    bills: "https://www.printyourbrackets.com/nfl-logos/buffalo-bills-logo.png",
 
-    panthers: "https://mk0teamcolorcodtgc6i.kinstacdn.com/wp-content/uploads/2014/05/Carolina_Panthers_logo.jpg",
+    panthers: "https://www.printyourbrackets.com/nfl-logos/carolina-panthers-logo.png",
 
-    bears: "https://mk0teamcolorcodtgc6i.kinstacdn.com/wp-content/uploads/2014/05/Chicago_Bears_logo.jpg",
+    bears: "https://www.printyourbrackets.com/nfl-logos/chicago-bears-logo.png",
 
-    bengals: "https://mk0teamcolorcodtgc6i.kinstacdn.com/wp-content/uploads/2017/05/Cincinnati_Bengals_logo.jpg",
+    bengals: "https://www.printyourbrackets.com/nfl-logos/cincinnati-bengals-logo.png",
 
-    browns: "https://mk0teamcolorcodtgc6i.kinstacdn.com/wp-content/uploads/2017/05/Cleveland_Browns_logo.jpg",
+    browns: "https://images.vexels.com/media/users/3/141834/isolated/preview/5c98f4cff6d29fd0f29fabc0bf7d66f4-cleveland-browns-american-football-by-vexels.png",
 
-    cowboys: "https://mk0teamcolorcodtgc6i.kinstacdn.com/wp-content/uploads/2017/05/Dallas_Cowboys_logo.jpg",
+    cowboys: "https://www.printyourbrackets.com/nfl-logos/dallas-cowboys-logo.png",
 
-    broncos: "https://mk0teamcolorcodtgc6i.kinstacdn.com/wp-content/uploads/2017/05/Denver_Broncos_logo.jpg",
+    broncos: "https://www.printyourbrackets.com/nfl-logos/denver-broncos-logo.png",
 
-    lions: "https://mk0teamcolorcodtgc6i.kinstacdn.com/wp-content/uploads/2014/05/Detroit_Lions_logo.jpg",
+    lions: "https://www.printyourbrackets.com/nfl-logos/detroit-lions-logo.png",
 
-    packers: "https://mk0teamcolorcodtgc6i.kinstacdn.com/wp-content/uploads/2014/05/Green_Bay_Packers_logo.jpg",
+    packers: "https://www.printyourbrackets.com/nfl-logos/green-bay-packers-logo.png",
 
-    texans: "https://mk0teamcolorcodtgc6i.kinstacdn.com/wp-content/uploads/2017/05/Houston_Texans_logo.jpg",
+    texans: "https://www.printyourbrackets.com/nfl-logos/houston-texans-logo.png",
 
-    colts: "https://mk0teamcolorcodtgc6i.kinstacdn.com/wp-content/uploads/2017/05/indianapolis_colts_logo_colors.png",
+    colts: "https://www.printyourbrackets.com/nfl-logos/indianapolis-colts-logo.png",
 
-    jaguars: "https://mk0teamcolorcodtgc6i.kinstacdn.com/wp-content/uploads/2017/05/Jacksonville_Jaguars_logo.jpg",
+    jaguars: "https://www.printyourbrackets.com/nfl-logos/jacksonville-jaguars-logo.png",
 
-    chiefs: "https://mk0teamcolorcodtgc6i.kinstacdn.com/wp-content/uploads/2017/05/Kansas_City_Chiefs_logo.jpg",
+    chiefs: "https://www.printyourbrackets.com/nfl-logos/kansas-city-chiefs-logo.png",
 
-    jaguars: "https://mk0teamcolorcodtgc6i.kinstacdn.com/wp-content/uploads/2017/05/NFL_Chargers_logo.jpg",
+    chargers: "https://sportslogohistory.com/wp-content/uploads/2018/05/los_angeles_chargers_matthew_harvey.png", //Find Another
 
-    chargers: "https://mk0teamcolorcodtgc6i.kinstacdn.com/wp-content/uploads/2017/05/Jacksonville_Jaguars_logo.jpg",
+    rams: "https://www.printyourbrackets.com/nfl-logos/st-louis-rams-logo.png",
 
-    rams: "https://mk0teamcolorcodtgc6i.kinstacdn.com/wp-content/uploads/2014/05/Los_Angeles_Rams_logo.jpg",
+    dolphins: "https://www.printyourbrackets.com/nfl-logos/miami-dolphins-logo.png",
 
-    dolphins: "https://mk0teamcolorcodtgc6i.kinstacdn.com/wp-content/uploads/2017/05/dolphins_logo_2018-300x220.png",
+    vikings: "https://www.printyourbrackets.com/nfl-logos/minnesota-vikings-logo.png",
 
-    vikings: "https://mk0teamcolorcodtgc6i.kinstacdn.com/wp-content/uploads/2014/05/Minnesota_Vikings_logo.jpg",
+    patriots: "https://www.printyourbrackets.com/nfl-logos/new-england-patriots-logo.png",
 
-    patriots: "https://mk0teamcolorcodtgc6i.kinstacdn.com/wp-content/uploads/2017/05/New_England_Patriots_logo.jpg",
+    saints: "https://www.printyourbrackets.com/nfl-logos/new-orleans-saints-logo.png",
 
-    saints: "https://mk0teamcolorcodtgc6i.kinstacdn.com/wp-content/uploads/2014/05/New_Orleans_Saints_logo.jpg",
+    giants: "https://www.printyourbrackets.com/nfl-logos/new-york-giants-logo.png",
 
-    giants: "https://mk0teamcolorcodtgc6i.kinstacdn.com/wp-content/uploads/2017/05/New_York_Giants_logo.jpg",
+    jets: "https://www.printyourbrackets.com/nfl-logos/new-york-jets-logo.png",
 
-    jets: "https://mk0teamcolorcodtgc6i.kinstacdn.com/wp-content/uploads/2017/05/new_york_jets_colors.png",
+    raiders: "https://www.printyourbrackets.com/nfl-logos/oakland-raiders-logo.png",
 
-    raiders: "https://mk0teamcolorcodtgc6i.kinstacdn.com/wp-content/uploads/2017/05/Oakland_Raiders_logo.jpg",
+    eagles: "https://www.printyourbrackets.com/nfl-logos/philadelphia-eagles-logo.png",
 
-    eagles: "https://mk0teamcolorcodtgc6i.kinstacdn.com/wp-content/uploads/2017/05/Philadelphia_Eagles_logo.jpg",
+    steelers: "https://www.printyourbrackets.com/nfl-logos/pittsburgh-steelers-logo.png",
 
-    steelers: "https://mk0teamcolorcodtgc6i.kinstacdn.com/wp-content/uploads/2017/05/Pittsburgh_Steelers_logo.jpg",
+    niners: "https://www.printyourbrackets.com/nfl-logos/san-francisco-49ers-logo.png",
 
-    niners: "https://mk0teamcolorcodtgc6i.kinstacdn.com/wp-content/uploads/2014/05/San_Francisco_49ers_logo.jpg",
+    seahawks: "https://www.printyourbrackets.com/nfl-logos/seattle-seahawks-logo.png",
 
-    seahawks: "https://mk0teamcolorcodtgc6i.kinstacdn.com/wp-content/uploads/2014/05/Seattle_Seahawks_logo.jpg",
+    buccaneers: "https://www.printyourbrackets.com/nfl-logos/tampa-bay-buccaneers-logo.png",
 
-    buccaneers: "https://mk0teamcolorcodtgc6i.kinstacdn.com/wp-content/uploads/2014/05/Tampa_Bay_Buccaneers_logo.jpg",
+    titans: "https://www.printyourbrackets.com/nfl-logos/tennessee-titans-logo.png",
 
-    titans: "https://mk0teamcolorcodtgc6i.kinstacdn.com/wp-content/uploads/2017/05/Tennessee_Titans_logo.jpg",
-
-    redskins: "https://mk0teamcolorcodtgc6i.kinstacdn.com/wp-content/uploads/2017/05/Washington_Redskins_logo.jpg",
+    redskins: "https://www.printyourbrackets.com/nfl-logos/washington-redskins-logo.png",
 
 
 }
@@ -267,6 +291,7 @@ var teamLogos = {
         var teamSelected = $(this).attr("value");
         console.log(teamSelected);
         if (teamSelected === "Arizona Cardinals") {
+            $(".logos").attr("src", teamLogos.cardinals);
             $("body").stop().animate({
                 backgroundColor: "rgb(151,35,63)",
                 color: "rgb(0,0,0)"
@@ -283,6 +308,7 @@ var teamLogos = {
             })
 
         } else if (teamSelected === "Atlanta Falcons") {
+            $(".logos").attr("src", teamLogos.falcons);
             $("body").stop().animate({
                 backgroundColor: "rgb(167,25,48)",
                 color: "rgb(0, 0, 0)"
@@ -299,6 +325,7 @@ var teamLogos = {
             })  
 
         } else if (teamSelected === "Baltimore Ravens") {
+            $(".logos").attr("src", teamLogos.ravens);
             $("body").stop().animate({
                 backgroundColor: "rgb(26,25,95)",
                 color: "rgb(0,0,0)"
@@ -312,6 +339,7 @@ var teamLogos = {
                 backgroundColor: "rgb(198,12,14)"
             })
         } else if (teamSelected === "Buffalo Bills") {
+            $(".logos").attr("src", teamLogos.bills);
             $("body").stop().animate({
                 backgroundColor: "rgb(0,51,141)",
                 color: "(255,255,255)"
@@ -327,6 +355,7 @@ var teamLogos = {
             })
 
         } else if (teamSelected === "Carolina Panthers") {
+            $(".logos").attr("src", teamLogos.panthers);
             $("body").stop().animate({
                 backgroundColor: "rgb(0,133,202)",
                 color: "rgb(16,24,32)"
@@ -342,6 +371,7 @@ var teamLogos = {
             })
             
         } else if (teamSelected === "Chicago Bears") {
+            $(".logos").attr("src", teamLogos.bears);
             $("body").stop().animate({
                 backgroundColor: "rgb(11,22,42)",
                 color: "rgb(11,22,42)"
@@ -357,6 +387,7 @@ var teamLogos = {
             })
             
         } else if (teamSelected === "Cincinnati Bengals") {
+            $(".logos").attr("src", teamLogos.bengals);
             $("body").stop().animate({
                 backgroundColor: "rgb(251,79,20,2)",
                 color: "rgb(255,255,255)"
@@ -372,6 +403,7 @@ var teamLogos = {
             })
 
         } else if (teamSelected === "Cleveland Browns") {
+            $(".logos").attr("src", teamLogos.browns);
             $("body").stop().animate({
                 backgroundColor: "rgb(49,29,0)",
                 color: "rgb(0,0,0)"
@@ -388,6 +420,7 @@ var teamLogos = {
             
 
         } else if (teamSelected === "Dallas Cowboys") {
+            $(".logos").attr("src", teamLogos.cowboys);
             $("body").stop().animate({
                 backgroundColor: "rgb(0,53,148)",
                 color: "rgb(255,255,255)"
@@ -403,6 +436,7 @@ var teamLogos = {
             })
 
         } else if (teamSelected === "Denver Broncos") {
+            $(".logos").attr("src", teamLogos.broncos);
             $("body").stop().animate({
                 backgroundColor: "rgb(0,34,68)",
                 color: "rgb(255,255,255)"
@@ -418,6 +452,7 @@ var teamLogos = {
             })
 
         } else if (teamSelected === "Detroit Lions") {
+            $(".logos").attr("src", teamLogos.lions);
             $("body").stop().animate({
                 backgroundColor: "rgb(0,118,182)",
                 color: "rgb(0,0,0)"
@@ -433,6 +468,7 @@ var teamLogos = {
             })
 
         } else if (teamSelected === "Green Bay Packers") {
+            $(".logos").attr("src", teamLogos.packers);
             $("body").stop().animate({
                 backgroundColor: "rgb(24,48,40)",
                 color: "rgb(255,255,255)"
@@ -448,6 +484,7 @@ var teamLogos = {
             })
 
         } else if (teamSelected === "Houston Texans") {
+            $(".logos").attr("src", teamLogos.texans);
             $("body").stop().animate({
                 backgroundColor: "rgb(3,32,47)",
                 color: "rgb(255,255,255)"
@@ -463,6 +500,7 @@ var teamLogos = {
             })
 
         } else if (teamSelected === "Indianapolis Colts") {
+            $(".logos").attr("src", teamLogos.colts);
             $("body").stop().animate({
                 backgroundColor: "rgb(0,44,95)",
                 color: "rgb(255,255,255)"
@@ -478,6 +516,7 @@ var teamLogos = {
             })
 
         } else if (teamSelected === "Jacksonville Jaguars") {
+            $(".logos").attr("src", teamLogos.jaguars);
             $("body").stop().animate({
                 backgroundColor: "rgb(0,103,120)",
                 color: "rgb(0,0,0)"
@@ -493,6 +532,7 @@ var teamLogos = {
             })
 
         } else if (teamSelected === "Kansas City Chiefs") {
+            $(".logos").attr("src", teamLogos.chiefs);
             $("body").stop().animate({
                 backgroundColor: "rgb(227,24,55)",
                 color: "rgb(0,0,0)"
@@ -508,6 +548,7 @@ var teamLogos = {
             })
 
         } else if (teamSelected === "Los Angeles Chargers") {
+            $(".logos").attr("src", teamLogos.chargers);
             $("body").stop().animate({
                 backgroundColor: "rgb(0,128,198)",
                 color: "rgb(0,0,0)"
@@ -523,6 +564,7 @@ var teamLogos = {
             })
 
         } else if (teamSelected === "Los Angeles Rams") {
+            $(".logos").attr("src", teamLogos.rams);
             $("body").stop().animate({
                 backgroundColor: "rgb(0,34,68)",
                 color: "rgb(255,255,255)"
@@ -538,6 +580,7 @@ var teamLogos = {
             })
 
         } else if (teamSelected === "Miami Dolphins") {
+            $(".logos").attr("src", teamLogos.dolphins);
             $("body").stop().animate({
                 backgroundColor: "rgb(0,142,151)",
                 color: "rgb(255,255,255)"
@@ -553,6 +596,7 @@ var teamLogos = {
             })
 
         } else if (teamSelected === "Minnesota Vikings") {
+            $(".logos").attr("src", teamLogos.vikings);
             $("body").stop().animate({
                 backgroundColor: "rgb(79,38,131)",
                 color: "rgb(0,0,0)"
@@ -568,6 +612,7 @@ var teamLogos = {
             })
 
         } else if (teamSelected === "New England Patriots") {
+            $(".logos").attr("src", teamLogos.patriots);
             $("body").stop().animate({
                 backgroundColor: "rgb(0,34,68)",
                 color: "rgb(255,255,255)"
@@ -583,6 +628,7 @@ var teamLogos = {
             })
 
         } else if (teamSelected === "New Orleans Saints") {
+            $(".logos").attr("src", teamLogos.saints);
             $("body").stop().animate({
                 backgroundColor: "rgb(211,188,141)",
                 color: "rgb(255,255,255)"
@@ -598,6 +644,7 @@ var teamLogos = {
             })
 
         } else if (teamSelected === "New York Giants") {
+            $(".logos").attr("src", teamLogos.giants);
             $("body").stop().animate({
                 backgroundColor: "rgb(1,35,82)",
                 color: "rgb(255,255,255)"
@@ -613,6 +660,7 @@ var teamLogos = {
             })
 
         } else if (teamSelected === "New York Jets") {
+            $(".logos").attr("src", teamLogos.jets);
             $("body").stop().animate({
                 backgroundColor: "rgb(0,63,45)",
                 color: "rgb(255,255,255)"
@@ -628,6 +676,7 @@ var teamLogos = {
             })
 
         } else if (teamSelected === "Oakland Raiders") {
+            $(".logos").attr("src", teamLogos.raiders);
             $("body").stop().animate({
                 backgroundColor: "rgb(0,0,0)",
                 color: "rgb(0,0,0)"
@@ -643,6 +692,7 @@ var teamLogos = {
             })
 
         } else if (teamSelected === "Philadelphia Eagles") {
+            $(".logos").attr("src", teamLogos.eagles);
             $("body").stop().animate({
                 backgroundColor: "rgb(0,76,84)",
                 color: "rgb(255,255,255"
@@ -658,6 +708,7 @@ var teamLogos = {
             })
 
         } else if (teamSelected === "Pittsburgh Steelers") {
+            $(".logos").attr("src", teamLogos.steelers);
             $("body").stop().animate({
                 backgroundColor: "rgb(255,182,18)",
                 color: "rgb(255,255,255)"
@@ -673,6 +724,7 @@ var teamLogos = {
             })
             
         } else if (teamSelected === "San Francisco 49ers") {
+            $(".logos").attr("src", teamLogos.niners);
             $("body").stop().animate({
                 backgroundColor: "rgb(170,0,0)",
                 color: "rgb(255,255,255)"
@@ -688,6 +740,7 @@ var teamLogos = {
             })
 
         } else if (teamSelected === "Seattle Seahawks") {
+            $(".logos").attr("src", teamLogos.seahawks);
             $("body").stop().animate({
                 backgroundColor: "rgb(105,190,40)",
                 color: "rgb(255,255,255)"
@@ -703,6 +756,7 @@ var teamLogos = {
             })
 
         } else if (teamSelected === "Tampa Bay Buccaneers") {
+            $(".logos").attr("src", teamLogos.buccaneers);
             $("body").stop().animate({
                 backgroundColor: "rgb(213,10,10)",
                 color: "rgb(255,255,255)"
@@ -718,6 +772,7 @@ var teamLogos = {
             })
 
         } else if (teamSelected === "Tennessee Titans") {
+            $(".logos").attr("src", teamLogos.titans);
             $("body").stop().animate({
                 backgroundColor: "rgb(0,42,92)",
                 color: "rgb(255,255,255)"
@@ -733,6 +788,7 @@ var teamLogos = {
             })
 
         } else  {
+            $(".logos").attr("src", teamLogos.redskins);
             $("body").stop().animate({
                 backgroundColor: "rgb(63,16,16)",
                 color: "rgb(255,255,255)"
