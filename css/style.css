@@ -132,3 +132,11 @@ td {
     background: rgba(0, 0, 0, .6)
 }
 
+.logos {
+    margin: 0 auto;
+}
+
+.logoDiv {
+    display: flex;
+}
+

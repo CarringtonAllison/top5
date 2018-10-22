@@ -44,6 +44,7 @@ $("#start").on("click", function () {
         method: "GET"
     }).then(function (response) {
         rank = response.Rankings;
+        // console.log(response);
 
         for (var i = 0; i < 5; i++) {
             var tRow = $("<tr>");
@@ -57,6 +58,31 @@ $("#start").on("click", function () {
             tRow.append(playerPosition, playerName, playerTeam, playersScore);
             $("tbody").append(tRow);
         }
+    });
+
+
+    var queryURL = "https://www.fantasyfootballnerd.com/service/byes/json/ryz7dd7qeq6e/ppr/";
+
+    $.ajax({
+        url: queryURL,
+        method: "GET"
+    }).then(function (response) {
+
+
+        console.log(response);
+
+        // for (var i = 0; i < 5; i++) {
+        //     var tRow = $("<tr>");
+        //     var playerPosition = $("<td>").text(rank[i].position);
+        //     var playerName = $("<td>").text(rank[i].name);
+        //     var playerTeam = $("<td>").text(rank[i].team);
+        //     var playersScore = $("<td>").text(rank[i].standard);
+        //     playersScore.addClass("scores")
+        //     playersScore.attr("data-ppr", rank[i].ppr);
+        //     playersScore.attr("data-standard", rank[i].standard);
+        //     tRow.append(playerPosition, playerName, playerTeam, playersScore);
+        //     $("tbody").append(tRow);
+        // }
     });
 
     var zip = $("#zipCode").val();
@@ -167,8 +193,8 @@ $("#standard").on("click", function () {
 })
 
 // if the yelp results are clicked then they will open another page with the yelp website 
-$(document).on("click",".bars",function(){
-    var barUrl =$(this).attr("data-url");
+$(document).on("click", ".bars", function () {
+    var barUrl = $(this).attr("data-url");
     console.log(barUrl);
     window.open(barUrl)
 
@@ -181,71 +207,69 @@ $(document).on("click",".bars",function(){
 
 var teamLogos = {
 
-    cardinals: "https://mk0teamcolorcodtgc6i.kinstacdn.com/wp-content/uploads/2017/05/Arizona_Cardinals_logo.jpg",
+    cardinals: "https://www.printyourbrackets.com/nfl-logos/arizona-cardinals-logo.png",
 
-    falcons: "https://mk0teamcolorcodtgc6i.kinstacdn.com/wp-content/uploads/2017/05/Atlanta_Falcons_logo.jpg",
+    falcons: "https://www.printyourbrackets.com/nfl-logos/atlanta-falcons-logo.png",
 
-    ravens: "https://mk0teamcolorcodtgc6i.kinstacdn.com/wp-content/uploads/2017/05/Baltimore_Ravens_logo.jpg",
+    ravens: "https://www.printyourbrackets.com/nfl-logos/baltimore-ravens-logo.png",
 
-    bills: "https://mk0teamcolorcodtgc6i.kinstacdn.com/wp-content/uploads/2017/05/Buffalo_Bills_logo.jpg",
+    bills: "https://www.printyourbrackets.com/nfl-logos/buffalo-bills-logo.png",
 
-    panthers: "https://mk0teamcolorcodtgc6i.kinstacdn.com/wp-content/uploads/2014/05/Carolina_Panthers_logo.jpg",
+    panthers: "https://www.printyourbrackets.com/nfl-logos/carolina-panthers-logo.png",
 
-    bears: "https://mk0teamcolorcodtgc6i.kinstacdn.com/wp-content/uploads/2014/05/Chicago_Bears_logo.jpg",
+    bears: "https://www.printyourbrackets.com/nfl-logos/chicago-bears-logo.png",
 
-    bengals: "https://mk0teamcolorcodtgc6i.kinstacdn.com/wp-content/uploads/2017/05/Cincinnati_Bengals_logo.jpg",
+    bengals: "https://www.printyourbrackets.com/nfl-logos/cincinnati-bengals-logo.png",
 
-    browns: "https://mk0teamcolorcodtgc6i.kinstacdn.com/wp-content/uploads/2017/05/Cleveland_Browns_logo.jpg",
+    browns: "https://banner2.kisspng.com/20180123/bxe/kisspng-logos-and-uniforms-of-the-cleveland-browns-nfl-fir-5a67fbb0cec1d5.2080489315167640808469.jpg", //Find Antother
 
-    cowboys: "https://mk0teamcolorcodtgc6i.kinstacdn.com/wp-content/uploads/2017/05/Dallas_Cowboys_logo.jpg",
+    cowboys: "https://www.printyourbrackets.com/nfl-logos/dallas-cowboys-logo.png",
 
-    broncos: "https://mk0teamcolorcodtgc6i.kinstacdn.com/wp-content/uploads/2017/05/Denver_Broncos_logo.jpg",
+    broncos: "https://www.printyourbrackets.com/nfl-logos/denver-broncos-logo.png",
 
-    lions: "https://mk0teamcolorcodtgc6i.kinstacdn.com/wp-content/uploads/2014/05/Detroit_Lions_logo.jpg",
+    lions: "https://www.printyourbrackets.com/nfl-logos/detroit-lions-logo.png",
 
-    packers: "https://mk0teamcolorcodtgc6i.kinstacdn.com/wp-content/uploads/2014/05/Green_Bay_Packers_logo.jpg",
+    packers: "https://www.printyourbrackets.com/nfl-logos/green-bay-packers-logo.png",
 
-    texans: "https://mk0teamcolorcodtgc6i.kinstacdn.com/wp-content/uploads/2017/05/Houston_Texans_logo.jpg",
+    texans: "https://www.printyourbrackets.com/nfl-logos/houston-texans-logo.png",
 
-    colts: "https://mk0teamcolorcodtgc6i.kinstacdn.com/wp-content/uploads/2017/05/indianapolis_colts_logo_colors.png",
+    colts: "https://www.printyourbrackets.com/nfl-logos/indianapolis-colts-logo.png",
 
-    jaguars: "https://mk0teamcolorcodtgc6i.kinstacdn.com/wp-content/uploads/2017/05/Jacksonville_Jaguars_logo.jpg",
+    jaguars: "https://www.printyourbrackets.com/nfl-logos/jacksonville-jaguars-logo.png",
 
-    chiefs: "https://mk0teamcolorcodtgc6i.kinstacdn.com/wp-content/uploads/2017/05/Kansas_City_Chiefs_logo.jpg",
+    chiefs: "https://www.printyourbrackets.com/nfl-logos/kansas-city-chiefs-logo.png",
 
-    jaguars: "https://mk0teamcolorcodtgc6i.kinstacdn.com/wp-content/uploads/2017/05/NFL_Chargers_logo.jpg",
+    chargers: "https://banner2.kisspng.com/20180624/pjx/kisspng-los-angeles-chargers-logo-beak-line-font-uc-san-diego-tritons-5b2f6e89879138.2104036215298351455553.jpg", //Find Another
 
-    chargers: "https://mk0teamcolorcodtgc6i.kinstacdn.com/wp-content/uploads/2017/05/Jacksonville_Jaguars_logo.jpg",
+    rams: "https://www.printyourbrackets.com/nfl-logos/st-louis-rams-logo.png",
 
-    rams: "https://mk0teamcolorcodtgc6i.kinstacdn.com/wp-content/uploads/2014/05/Los_Angeles_Rams_logo.jpg",
+    dolphins: "https://www.printyourbrackets.com/nfl-logos/miami-dolphins-logo.png",
 
-    dolphins: "https://mk0teamcolorcodtgc6i.kinstacdn.com/wp-content/uploads/2017/05/dolphins_logo_2018-300x220.png",
+    vikings: "https://www.printyourbrackets.com/nfl-logos/minnesota-vikings-logo.png",
 
-    vikings: "https://mk0teamcolorcodtgc6i.kinstacdn.com/wp-content/uploads/2014/05/Minnesota_Vikings_logo.jpg",
+    patriots: "https://www.printyourbrackets.com/nfl-logos/new-england-patriots-logo.png",
 
-    patriots: "https://mk0teamcolorcodtgc6i.kinstacdn.com/wp-content/uploads/2017/05/New_England_Patriots_logo.jpg",
+    saints: "https://www.printyourbrackets.com/nfl-logos/new-orleans-saints-logo.png",
 
-    saints: "https://mk0teamcolorcodtgc6i.kinstacdn.com/wp-content/uploads/2014/05/New_Orleans_Saints_logo.jpg",
+    giants: "https://www.printyourbrackets.com/nfl-logos/new-york-giants-logo.png",
 
-    giants: "https://mk0teamcolorcodtgc6i.kinstacdn.com/wp-content/uploads/2017/05/New_York_Giants_logo.jpg",
+    jets: "https://www.printyourbrackets.com/nfl-logos/new-york-jets-logo.png",
 
-    jets: "https://mk0teamcolorcodtgc6i.kinstacdn.com/wp-content/uploads/2017/05/new_york_jets_colors.png",
+    raiders: "https://www.printyourbrackets.com/nfl-logos/oakland-raiders-logo.png",
 
-    raiders: "https://mk0teamcolorcodtgc6i.kinstacdn.com/wp-content/uploads/2017/05/Oakland_Raiders_logo.jpg",
+    eagles: "https://www.printyourbrackets.com/nfl-logos/philadelphia-eagles-logo.png",
 
-    eagles: "https://mk0teamcolorcodtgc6i.kinstacdn.com/wp-content/uploads/2017/05/Philadelphia_Eagles_logo.jpg",
+    steelers: "https://www.printyourbrackets.com/nfl-logos/pittsburgh-steelers-logo.png",
 
-    steelers: "https://mk0teamcolorcodtgc6i.kinstacdn.com/wp-content/uploads/2017/05/Pittsburgh_Steelers_logo.jpg",
+    niners: "https://www.printyourbrackets.com/nfl-logos/san-francisco-49ers-logo.png",
 
-    niners: "https://mk0teamcolorcodtgc6i.kinstacdn.com/wp-content/uploads/2014/05/San_Francisco_49ers_logo.jpg",
+    seahawks: "https://www.printyourbrackets.com/nfl-logos/seattle-seahawks-logo.png",
 
-    seahawks: "https://mk0teamcolorcodtgc6i.kinstacdn.com/wp-content/uploads/2014/05/Seattle_Seahawks_logo.jpg",
+    buccaneers: "https://www.printyourbrackets.com/nfl-logos/tampa-bay-buccaneers-logo.png",
 
-    buccaneers: "https://mk0teamcolorcodtgc6i.kinstacdn.com/wp-content/uploads/2014/05/Tampa_Bay_Buccaneers_logo.jpg",
+    titans: "https://www.printyourbrackets.com/nfl-logos/tennessee-titans-logo.png",
 
-    titans: "https://mk0teamcolorcodtgc6i.kinstacdn.com/wp-content/uploads/2017/05/Tennessee_Titans_logo.jpg",
-
-    redskins: "https://mk0teamcolorcodtgc6i.kinstacdn.com/wp-content/uploads/2017/05/Washington_Redskins_logo.jpg",
+    redskins: "https://www.printyourbrackets.com/nfl-logos/washington-redskins-logo.png",
 
 
 }
@@ -254,7 +278,7 @@ favTeamColor()
 function favTeamColor() {
     console.log("click");
     // console.log(this);
-    
+
     $(".dropdown-item").on("click", function () {
         var logos = $("<image>").attr("class", "logos");
         $(".logos").attr("src", teamLogos.cardinals)
@@ -262,11 +286,13 @@ function favTeamColor() {
         var teamSelected = $(this).attr("value");
         console.log(teamSelected);
         if (teamSelected === "Arizona Cardinals") {
+            $(".logos").attr("src", teamLogos.cardinals);
             $("body").stop().animate({
                 backgroundColor: "rgb(151,35,63)",
                 color: "rgb(255,182,18)"
             }, 1000);
         } else if (teamSelected === "Atlanta Falcons") {
+            $(".logos").attr("src", teamLogos.falcons);
             $("body").stop().animate({
                 backgroundColor: "rgb(167,25,48)",
                 color: "rgb(0, 0, 0)"
@@ -421,12 +447,12 @@ function favTeamColor() {
                 backgroundColor: "rgb(0,42,92)",
                 color: "rgb(68,149,209)"
             }, 1000);
-        } else  {
+        } else {
             $("body").stop().animate({
                 backgroundColor: "rgb(63,16,16)",
                 color: "rgb(255,182,18)"
             }, 1000);
-        } 
+        }
 
     });
 
