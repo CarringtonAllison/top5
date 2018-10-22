@@ -36,6 +36,7 @@ $(document).ready(function () {
 //when the start button is clicked
 $("#start").on("click", function () {
 
+    //Fantasy Football Nerd API
     var queryURL = "https://www.fantasyfootballnerd.com/service/weekly-rankings/json/" + fantasyApiKey + "/QB";
 
     $.ajax({
@@ -58,6 +59,47 @@ $("#start").on("click", function () {
         }
     });
 
+    var zip = $("#zipCode").val();
+
+
+    // Yelp API 
+    var yelpUrl = "https://api.yelp.com/v3/businesses/search?location=" + zip + "&categories=sportsbars&limit=5"
+
+    $.ajax({
+        url: yelpUrl,
+        headers: {
+            'Authorization': 'Bearer DEarLC7CAG_qsAEt1-nz8iyDsLL2tcDUn72S1wje4GmAksA05LKkj2MpqqyyNzFMdiysoE-Nv_wTUGQQn-rYM5scXqQpdFu-mObJuPPtwyiGXrqLWPGAYdrG-q7LW3Yx',
+        },
+        method: 'GET',
+        dataType: 'json',
+        success: function (data) {
+            // console.log(data);
+            sportsBar = data.businesses
+            console.log(sportsBar)
+
+            for (var i = 0; i < 5; i++) {
+                var $div = $("<div>");
+                $div.addClass("col d-flex justify-content-center layout");
+                var $2div = $("<div>");
+                $2div.addClass("card bars");
+                $2div.attr("data-url", sportsBar[i].url);
+                var $img = $("<img>");
+                $img.addClass("card-img-top img-size");
+                $img.attr("src", sportsBar[i].image_url);
+                $img.attr("alt", sportsBar[i].name);
+                var $3div = $("<div>");
+                $3div.addClass("card-body");
+                var $p = $("<p>");
+                $p.addClass("card-text");
+                $p.attr("id", "barInfo")
+                $p.append("<h5>" + sportsBar[i].name + "</h5>", "<p class='barText'>" + sportsBar[i].location.display_address + "</p>", "<p class='barText'>" + "Phone: " + sportsBar[i].phone + "</p>");
+                $div.append($2div);
+                $2div.append($img, $3div);
+                $3div.append($p);
+                $("#barListing").append($div);
+            }
+        }
+    });
 });
 
 
@@ -107,7 +149,6 @@ database.ref().on('child_added', function (snapshot) {
 //dipslays the msg on the chat screen 
 function displayMsg(name, text) {
     $('<div />').text(text).prepend($('<em/>').text(name + ': ')).appendTo('#msgList');
-
     $('#msgList')[0].scrollTop = $('#msgList')[0].scrollHeight;
 };
 
@@ -125,51 +166,13 @@ $("#standard").on("click", function () {
     $(".scores").text($(".scores").attr("data-standard"))
 })
 
+// if the yelp results are clicked then they will open another page with the yelp website 
+$(document).on("click",".bars",function(){
+    var barUrl =$(this).attr("data-url");
+    console.log(barUrl);
+    window.open(barUrl)
 
-// this is the YELP api testing on a button
-$("#yelp").on("click", function () {
-    console.log("working")
-    //This url is set for 85233 zip right now but we can set a variable for that to change with input 
-    var yelpUrl = "https://api.yelp.com/v3/businesses/search?location=85233&categories=sportsbars&limit=5"
-
-    $.ajax({
-        url: yelpUrl,
-        headers: {
-            'Authorization': 'Bearer DEarLC7CAG_qsAEt1-nz8iyDsLL2tcDUn72S1wje4GmAksA05LKkj2MpqqyyNzFMdiysoE-Nv_wTUGQQn-rYM5scXqQpdFu-mObJuPPtwyiGXrqLWPGAYdrG-q7LW3Yx',
-        },
-        method: 'GET',
-        dataType: 'json',
-        success: function (data) {
-            // console.log(data);
-            sportsBar = data.businesses
-            console.log(sportsBar)
-
-            for (var i = 0; i < 5; i++) {
-                var $div = $("<div>");
-                $div.addClass("col d-flex justify-content-center layout");
-                var $2div = $("<div>");
-                $2div.addClass("card bars");
-                var $img = $("<img>");
-                $img.addClass("card-img-top img-size");
-                $img.attr("src", sportsBar[i].image_url);
-                $img.attr("alt", sportsBar[i].name);
-                var $3div = $("<div>");
-                $3div.addClass("card-body");
-                var $p = $("<p>");
-                $p.addClass("card-text");
-                $p.attr("id", "barInfo")
-                $p.append("<h4>" + sportsBar[i].name + "</h4>", "<p class='barText'>" + sportsBar[i].location.display_address + "</p>", "<p class='barText'>" + "Phone: " + sportsBar[i].phone + "</p>");
-                $div.append($2div);
-                $2div.append($img, $3div);
-                $3div.append($p);
-                $("#barListing").append($div);
-            }
-
-
-        }
-    });
-
-});
+})
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
