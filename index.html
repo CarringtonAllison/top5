@@ -12,32 +12,18 @@
         crossorigin="anonymous">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" href="./css/style.css" type="text/css">
-
     <title>Sleepers</title>
 </head>
 
 <body>
-    <!-- navbar -->
-    <nav class="main-screen navbar navbar-expand-lg navbar-light bg-light nav-color">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Standard</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">PPR</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
-                        Favorite Team
-                    </a>
-                    <div id="nav-bar-test" class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+    <!-- first start screen that will hide after user presses start -->
+    <div class="container">
+        <div class="row justify-content-center start-screen">
+            <div id="firstScreen" class="col">
+                <div class="dropdown">
+                    <a class="first-buttons btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Favorite Team</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <a class="dropdown-item team-list" href="#" value="Arizona Cardinals">Arizona Cardinals</a>
                         <a class="dropdown-item" href="#" value="Atlanta Falcons">Atlanta Falcons</a>
                         <a class="dropdown-item" href="#" value="Baltimore Ravens">Baltimore Ravens</a>
@@ -76,15 +62,13 @@
                     <input class="justify-content-center" type="text" id="zipCode" placeholder="Zip Code">
                 </div>
                 <div>
-                    <a href="#" id="start" class="btn btn-danger btn-lg"> Let's Go!!</a>
+                    <a href="#" id="start" class="btn btn-lg"> Let's Go!!</a>
                 </div>
             </div>
         </div>
     </div>
-
-
     <!-- navbar -->
-    <nav class="main-screen navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="main-screen navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">Sleepers</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
             aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -97,9 +81,6 @@
                 </li>
                 <li id="ppr" class="nav-item">
                     <a class="nav-link" href="#">PPR</a>
-                </li>
-                <li id="yelp" class="nav-item">
-                    <a class="nav-link" href="#">Yelp</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
@@ -144,13 +125,7 @@
             </ul>
         </div>
     </nav>
-
-
-
     <!-- this is the jumbotron -->
-
-
-
     <!-- table of the sleepers to be dislayed -->
     <div class="fluid-container main-screen">
         <div class="row main-screen">
@@ -186,15 +161,11 @@
             </div>
         </div>
     </div>
-
     <div class="container main-screen">
-
         <hr id="topHR">
-
         <!-- where the Yelp bars load -->
         <div id="barListing" class="row"></div>
         <hr>
-
         <!-- the chat box -->
         <div class="row justify-content-center">
             <div class="col-sm-12 col-md-8 col-lg-6">
@@ -217,10 +188,6 @@
             </div>
         </div>
     </div>
-
-
-
-
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
