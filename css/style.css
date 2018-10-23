@@ -184,8 +184,9 @@ td {
 
 .mainLogos {
     margin: 10px auto;
-    height: 100px;
+    height: 150px;
     width: auto;
+    margin-top: 125px;
 }
 
 @font-face {
@@ -215,24 +216,108 @@ td {
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
         
-        .positionButtons {
-            font-size: 9px;
-            padding-left: 10px;
-        }
+    .positionButtons {
+        font-size: 9px;
+        padding-left: 10px;
+    }
 
-        .logos {
-            height: 50px;
-        }
+    .logos {
+        height: 50px;
+    }
+} 
+    
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+        
+    .logos {
+        height: 75px;
+    }
+
+    th {
+        font-size: 14px;
+    }
+
+    .card-header {
+        font-size: 15px;
+    }
+        
+    td {
+        font-size: 13px;
+    }
+
+    .mainLogos {
+        height: 200px;
+    }
 } 
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-/* @media only screen and (min-width: 600px) {...}  */
-
 /* Medium devices (landscape tablets, 768px and up) */
-/* @media only screen and (min-width: 768px) {...}  */
+@media only screen and (min-width: 768px) {
+    
+    .logos {
+        height: 50px;
+    }
+    
+    th {
+        font-size: 15px;      
+    }
+    
+    .positionButtons {
+        font-size: 12px;
+    }
+    
+    td {
+        font-size: 14px;
+    }     
+
+    .mainLogos {
+        height: 250px;
+    }
+} 
 
 /* Large devices (laptops/desktops, 992px and up) */
-/* @media only screen and (min-width: 992px) {...}  */
+@media only screen and (min-width: 992px) {
+    
+    .logos {
+        height: 100px;
+    }
+    
+    th {
+        font-size: 16px;
+    }
+    
+    td {
+        font-size: 15px;
+    }
+    
+    .positionButtons {
+        font-size: 13px;
+    } 
+
+    .mainLogos {
+        height: 280px;
+    }
+} 
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-/* @media only screen and (min-width: 1200px) {...} */
+@media only screen and (min-width: 1200px) {
+    
+    .logos {
+        height: 120px;
+    }
+    
+    th {
+        font-size: 17px;       
+    }
+    
+    td {
+        font-size: 16px;
+    }
+    
+    .card-header {
+        font-size: 16px;
+    }
+
+    .mainLogos {
+        height: 300px;
+    }
+}
