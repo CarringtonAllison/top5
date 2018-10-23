@@ -112,7 +112,7 @@ $("#start").on("click", function () {
 
 //Position buttons
 $(".positionButtons").on("click", function () {
-    $("#player").empty();
+    // $("#player").empty();
     var position = $(this).attr("id")
     var queryURL = "https://www.fantasyfootballnerd.com/service/weekly-rankings/json/" + fantasyApiKey + "/" + position;
 
@@ -120,6 +120,7 @@ $(".positionButtons").on("click", function () {
         url: queryURL,
         method: "GET"
     }).then(function (response) {
+        $("#player").empty();
         console.log(response)
         rank = response.Rankings;
 
