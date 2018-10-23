@@ -12,6 +12,7 @@ var database = firebase.database();
 var fantasyApiKey = "ryz7dd7qeq6e";
 var yelpApiKey = "DEarLC7CAG_qsAEt1-nz8iyDsLL2tcDUn72S1wje4GmAksA05LKkj2MpqqyyNzFMdiysoE-Nv_wTUGQQn-rYM5scXqQpdFu-mObJuPPtwyiGXrqLWPGAYdrG-q7LW3Yx"
 var cardColor;
+var audio = new Audio ("javascript/top5audio.mp3");
 
 
 
@@ -22,9 +23,6 @@ jQuery.ajaxPrefilter(function (options) {
     }
 });
 
-
-
-
 //start button hiding everything 
 $(document).ready(function () {
     $(".main-screen").hide();
@@ -32,17 +30,17 @@ $(document).ready(function () {
         $(".main-screen").fadeIn();
         $(".first-buttons").hide();
         $("#zipCode").hide();
+        $(".mainLogos").hide();
         $(this).hide();
     });
 });
 
-var audio = new Audio ("javascript/top5audio.mp3");
 
 //when the start button is clicked
 $("#start").on("click", function () {
+    var zip = $("#zipCode").val();
     audio.play();
    
-
     //Fantasy Football Nerd API
     var queryURL = "https://www.fantasyfootballnerd.com/service/weekly-rankings/json/" + fantasyApiKey + "/QB";
 
@@ -67,34 +65,6 @@ $("#start").on("click", function () {
             $("tbody").append(tRow);
         }
     });
-
-
-    var queryURL = "https://www.fantasyfootballnerd.com/service/byes/json/ryz7dd7qeq6e/ppr/";
-
-    $.ajax({
-        url: queryURL,
-        method: "GET"
-    }).then(function (response) {
-
-
-        console.log(response);
-
-        // for (var i = 0; i < 5; i++) {
-        //     var tRow = $("<tr>");
-        //     var playerPosition = $("<td>").text(rank[i].position);
-        //     var playerName = $("<td>").text(rank[i].name);
-        //     var playerTeam = $("<td>").text(rank[i].team);
-        //     var playersScore = $("<td>").text(rank[i].standard);
-        //     playersScore.addClass("scores")
-        //     playersScore.attr("data-ppr", rank[i].ppr);
-        //     playersScore.attr("data-standard", rank[i].standard);
-        //     tRow.append(playerPosition, playerName, playerTeam, playersScore);
-        //     $("tbody").append(tRow);
-        // }
-    });
-
-    var zip = $("#zipCode").val();
-
 
     // Yelp API 
     var yelpUrl = "https://api.yelp.com/v3/businesses/search?location=" + zip + "&categories=sportsbars&limit=5"
@@ -289,16 +259,12 @@ var teamLogos = {
 
 }
 
-
-
     
     $(document).on("click", ".dropdown-item", function () {
-        // var logos = $("<image>").attr("class", "logos");
-        // $(".logos").attr("src", teamLogos.cardinals)
-        // $(".main-screen").append(logos);
         var teamSelected = $(this).attr("value");
         console.log(teamSelected);
         if (teamSelected === "Arizona Cardinals") {
+            $(".mainLogos").attr("src", teamLogos.cardinals);
             $(".logos").attr("src", teamLogos.cardinals);
             $("body").stop().animate({
                 backgroundColor: "rgb(151,35,63)",
@@ -316,6 +282,7 @@ var teamLogos = {
             })
 
         } else if (teamSelected === "Atlanta Falcons") {
+            $(".mainLogos").attr("src", teamLogos.falcons);
             $(".logos").attr("src", teamLogos.falcons);
             $("body").stop().animate({
                 backgroundColor: "rgb(167,25,48)",
@@ -333,6 +300,7 @@ var teamLogos = {
             })  
 
         } else if (teamSelected === "Baltimore Ravens") {
+            $(".mainLogos").attr("src", teamLogos.ravens);
             $(".logos").attr("src", teamLogos.ravens);
             $("body").stop().animate({
                 backgroundColor: "rgb(26,25,95)",
@@ -347,6 +315,7 @@ var teamLogos = {
                 backgroundColor: "rgb(198,12,14)"
             })
         } else if (teamSelected === "Buffalo Bills") {
+            $(".mainLogos").attr("src", teamLogos.bills);
             $(".logos").attr("src", teamLogos.bills);
             $("body").stop().animate({
                 backgroundColor: "rgb(0,51,141)",
@@ -363,6 +332,7 @@ var teamLogos = {
             })
 
         } else if (teamSelected === "Carolina Panthers") {
+            $(".mainLogos").attr("src", teamLogos.panthers);
             $(".logos").attr("src", teamLogos.panthers);
             $("body").stop().animate({
                 backgroundColor: "rgb(0,133,202)",
@@ -379,6 +349,7 @@ var teamLogos = {
             })
             
         } else if (teamSelected === "Chicago Bears") {
+            $(".mainLogos").attr("src", teamLogos.bears);
             $(".logos").attr("src", teamLogos.bears);
             $("body").stop().animate({
                 backgroundColor: "rgb(11,22,42)",
@@ -395,6 +366,7 @@ var teamLogos = {
             })
             
         } else if (teamSelected === "Cincinnati Bengals") {
+            $(".mainLogos").attr("src", teamLogos.bengals);
             $(".logos").attr("src", teamLogos.bengals);
             $("body").stop().animate({
                 backgroundColor: "rgb(251,79,20,2)",
@@ -411,6 +383,7 @@ var teamLogos = {
             })
 
         } else if (teamSelected === "Cleveland Browns") {
+            $(".mainLogos").attr("src", teamLogos.browns);
             $(".logos").attr("src", teamLogos.browns);
             $("body").stop().animate({
                 backgroundColor: "rgb(49,29,0)",
@@ -428,6 +401,7 @@ var teamLogos = {
             
 
         } else if (teamSelected === "Dallas Cowboys") {
+            $(".mainLogos").attr("src", teamLogos.cowboys);
             $(".logos").attr("src", teamLogos.cowboys);
             $("body").stop().animate({
                 backgroundColor: "rgb(0,53,148)",
@@ -444,6 +418,7 @@ var teamLogos = {
             })
 
         } else if (teamSelected === "Denver Broncos") {
+            $(".mainLogos").attr("src", teamLogos.broncos);
             $(".logos").attr("src", teamLogos.broncos);
             $("body").stop().animate({
                 backgroundColor: "rgb(0,34,68)",
@@ -460,6 +435,7 @@ var teamLogos = {
             })
 
         } else if (teamSelected === "Detroit Lions") {
+            $(".mainLogos").attr("src", teamLogos.lions);
             $(".logos").attr("src", teamLogos.lions);
             $("body").stop().animate({
                 backgroundColor: "rgb(0,118,182)",
@@ -476,6 +452,7 @@ var teamLogos = {
             })
 
         } else if (teamSelected === "Green Bay Packers") {
+            $(".mainLogos").attr("src", teamLogos.packers);
             $(".logos").attr("src", teamLogos.packers);
             $("body").stop().animate({
                 backgroundColor: "rgb(24,48,40)",
@@ -492,6 +469,7 @@ var teamLogos = {
             })
 
         } else if (teamSelected === "Houston Texans") {
+            $(".mainLogos").attr("src", teamLogos.texans);
             $(".logos").attr("src", teamLogos.texans);
             $("body").stop().animate({
                 backgroundColor: "rgb(3,32,47)",
@@ -508,6 +486,7 @@ var teamLogos = {
             })
 
         } else if (teamSelected === "Indianapolis Colts") {
+            $(".mainLogos").attr("src", teamLogos.colts);
             $(".logos").attr("src", teamLogos.colts);
             $("body").stop().animate({
                 backgroundColor: "rgb(0,44,95)",
@@ -524,6 +503,7 @@ var teamLogos = {
             })
 
         } else if (teamSelected === "Jacksonville Jaguars") {
+            $(".mainLogos").attr("src", teamLogos.jaguars);
             $(".logos").attr("src", teamLogos.jaguars);
             $("body").stop().animate({
                 backgroundColor: "rgb(0,103,120)",
@@ -540,6 +520,7 @@ var teamLogos = {
             })
 
         } else if (teamSelected === "Kansas City Chiefs") {
+            $(".mainLogos").attr("src", teamLogos.chiefs);
             $(".logos").attr("src", teamLogos.chiefs);
             $("body").stop().animate({
                 backgroundColor: "rgb(227,24,55)",
@@ -556,6 +537,7 @@ var teamLogos = {
             })
 
         } else if (teamSelected === "Los Angeles Chargers") {
+            $(".mainLogos").attr("src", teamLogos.chargers);
             $(".logos").attr("src", teamLogos.chargers);
             $("body").stop().animate({
                 backgroundColor: "rgb(0,128,198)",
@@ -572,6 +554,7 @@ var teamLogos = {
             })
 
         } else if (teamSelected === "Los Angeles Rams") {
+            $(".mainLogos").attr("src", teamLogos.rams);
             $(".logos").attr("src", teamLogos.rams);
             $("body").stop().animate({
                 backgroundColor: "rgb(0,34,68)",
@@ -588,6 +571,7 @@ var teamLogos = {
             })
 
         } else if (teamSelected === "Miami Dolphins") {
+            $(".mainLogos").attr("src", teamLogos.dolphins);
             $(".logos").attr("src", teamLogos.dolphins);
             $("body").stop().animate({
                 backgroundColor: "rgb(0,142,151)",
@@ -604,6 +588,7 @@ var teamLogos = {
             })
 
         } else if (teamSelected === "Minnesota Vikings") {
+            $(".mainLogos").attr("src", teamLogos.vikings);
             $(".logos").attr("src", teamLogos.vikings);
             $("body").stop().animate({
                 backgroundColor: "rgb(79,38,131)",
@@ -620,6 +605,7 @@ var teamLogos = {
             })
 
         } else if (teamSelected === "New England Patriots") {
+            $(".mainLogos").attr("src", teamLogos.patriots);
             $(".logos").attr("src", teamLogos.patriots);
             $("body").stop().animate({
                 backgroundColor: "rgb(0,34,68)",
@@ -636,6 +622,7 @@ var teamLogos = {
             })
 
         } else if (teamSelected === "New Orleans Saints") {
+            $(".mainLogos").attr("src", teamLogos.saints);
             $(".logos").attr("src", teamLogos.saints);
             $("body").stop().animate({
                 backgroundColor: "rgb(211,188,141)",
@@ -652,6 +639,7 @@ var teamLogos = {
             })
 
         } else if (teamSelected === "New York Giants") {
+            $(".mainLogos").attr("src", teamLogos.giants);
             $(".logos").attr("src", teamLogos.giants);
             $("body").stop().animate({
                 backgroundColor: "rgb(1,35,82)",
@@ -668,6 +656,7 @@ var teamLogos = {
             })
 
         } else if (teamSelected === "New York Jets") {
+            $(".mainLogos").attr("src", teamLogos.jets);
             $(".logos").attr("src", teamLogos.jets);
             $("body").stop().animate({
                 backgroundColor: "rgb(0,63,45)",
@@ -684,6 +673,7 @@ var teamLogos = {
             })
 
         } else if (teamSelected === "Oakland Raiders") {
+            $(".mainLogos").attr("src", teamLogos.raiders);
             $(".logos").attr("src", teamLogos.raiders);
             $("body").stop().animate({
                 backgroundColor: "rgb(0,0,0)",
@@ -700,6 +690,7 @@ var teamLogos = {
             })
 
         } else if (teamSelected === "Philadelphia Eagles") {
+            $(".mainLogos").attr("src", teamLogos.eagles);
             $(".logos").attr("src", teamLogos.eagles);
             $("body").stop().animate({
                 backgroundColor: "rgb(0,76,84)",
@@ -716,6 +707,7 @@ var teamLogos = {
             })
 
         } else if (teamSelected === "Pittsburgh Steelers") {
+            $(".mainLogos").attr("src", teamLogos.steelers);
             $(".logos").attr("src", teamLogos.steelers);
             $("body").stop().animate({
                 backgroundColor: "rgb(255,182,18)",
@@ -732,6 +724,7 @@ var teamLogos = {
             })
             
         } else if (teamSelected === "San Francisco 49ers") {
+            $(".mainLogos").attr("src", teamLogos.niners);
             $(".logos").attr("src", teamLogos.niners);
             $("body").stop().animate({
                 backgroundColor: "rgb(170,0,0)",
@@ -748,6 +741,7 @@ var teamLogos = {
             })
 
         } else if (teamSelected === "Seattle Seahawks") {
+            $(".mainLogos").attr("src", teamLogos.seahawks);
             $(".logos").attr("src", teamLogos.seahawks);
             $("body").stop().animate({
                 backgroundColor: "rgb(105,190,40)",
@@ -764,6 +758,7 @@ var teamLogos = {
             })
 
         } else if (teamSelected === "Tampa Bay Buccaneers") {
+            $(".mainLogos").attr("src", teamLogos.buccaneers);
             $(".logos").attr("src", teamLogos.buccaneers);
             $("body").stop().animate({
                 backgroundColor: "rgb(213,10,10)",
@@ -780,6 +775,7 @@ var teamLogos = {
             })
 
         } else if (teamSelected === "Tennessee Titans") {
+            $(".mainLogos").attr("src", teamLogos.titans);
             $(".logos").attr("src", teamLogos.titans);
             $("body").stop().animate({
                 backgroundColor: "rgb(0,42,92)",
@@ -795,7 +791,8 @@ var teamLogos = {
                 backgroundColor: "rgb(255,255,255)"
             })
 
-        } else  {
+        } else if (teamSelected === "Washington Redskins") {
+            $(".mainLogos").attr("src", teamLogos.redskins);
             $(".logos").attr("src", teamLogos.redskins);
             $("body").stop().animate({
                 backgroundColor: "rgb(63,16,16)",
@@ -811,7 +808,7 @@ var teamLogos = {
                 backgroundColor: "rgb(255,255,255)"
             })
             
-        } 
+        }
 
     });
 
