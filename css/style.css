@@ -216,16 +216,16 @@ td {
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
         
-    .positionButtons {
-        font-size: 9px;
-        padding-left: 10px;
-    }
+        .positionButtons {
+            font-size: 9px;
+            padding-left: 10px;
+        }
 
-    .logos {
-        height: 50px;
-    }
+        .logos {
+            height: 50px;
+        }
 } 
-    
+
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
         
@@ -243,11 +243,12 @@ td {
         
     td {
         font-size: 13px;
-    }
+    } 
 
-    .mainLogos {
-        height: 200px;
-    }
+
+.mainLogos {
+    height: 200px;
+}
 } 
 
 /* Medium devices (landscape tablets, 768px and up) */
