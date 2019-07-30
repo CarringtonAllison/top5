@@ -721,7 +721,7 @@ var teamLogos = {
             
             $(".hrColor").stop().animate({
                 backgroundColor: "rgb(0,0,0)"
-            })
+           })
             
         } else if (teamSelected === "San Francisco 49ers") {
             $(".mainLogos").attr("src", teamLogos.niners);
